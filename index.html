@@ -3,22 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakımda - Dörten Yapı Sanayi</title>
+    <meta name="description" content="Dörten Yapı Sanayi - İnşaat, yapı ve müteahhitlik hizmetleri. Ankara'da profesyonel ve güvenilir yapı çözümleri.">
+    <meta name="keywords" content="4n Yapı, Dörten Yapı, inşaat, müteahhit, yapı, Ankara, inşaat firması, müteahhitlik">
+    <meta name="author" content="Dörten Yapı Sanayi">
+    <meta property="og:title" content="Dörten Yapı Sanayi">
+    <meta property="og:description" content="İnşaat ve yapı sektöründe profesyonel çözümler">
+    <meta property="og:image" content="images/4nyapi_logo.png">
+    <meta property="og:url" content="https://www.4nyapi.com">
+      <title>Dörten Yapı Sanayi Turizm Ticaret Limited Şirketi</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <div class="language-switcher">
+        <select id="langSelect" onchange="changeLanguage()">
+            <option value="tr">Türkçe</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+    
     <div class="maintenance-container">
         <img src="images/4nyapi_logo.png" alt="Dörten Yapı Sanayi Logo" class="logo">
-        <div class="construction-icon">🏗️</div>
-        <h1>Sitemiz Bakımda</h1>
-        <p>Değerli müşterilerimiz,</p>
-        <p>Web sitemiz şu anda bakım çalışmaları sebebiyle geçici olarak hizmet verememektedir. Size daha iyi hizmet verebilmek için çalışıyoruz.</p>
-        <p>Anlayışınız için teşekkür ederiz.</p>
+        <h1>DÖRTEN YAPI SANAYİ TURİZM TİCARET LİMİTED ŞİRKETİ</h1>
+        <h1 data-translate="title">Sitemiz Bakım Aşamasındadır</h1>
+        <p data-translate="message">Değerli müşterilerimiz,</p>
+        <p data-translate="status">Web sitemiz şu anda bakım çalışmaları sebebiyle geçici olarak hizmet verememektedir. Size daha iyi hizmet verebilmek için çalışıyoruz.</p>
+        <p data-translate="thanks">Anlayışınız için teşekkür ederiz.</p>
         <div class="estimated-time">
-            <strong>Tahmini Tamamlanma Süresi:</strong><br>
-            En kısa sürede hizmetinizdeyiz
+            <strong data-translate="estimated">Tahmini Tamamlanma Süresi:</strong><br>
+            <span data-translate="soon">En kısa sürede hizmetinizdeyiz</span>
+        </div>
+        
+        <div class="contact-info">
+            <h2 data-translate="contact">İletişim Bilgilerimiz</h2>
+            <ul class="contact-list">
+                <li>
+                    <i class="fas fa-phone"></i>
+                    +90 (312) 426 07 78
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@4nyapi.com">info@4nyapi.com</a>
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Büklüm Sk. No: 66/2, Kavaklıdere, Çankaya/ANKARA
+                </li>
+            </ul>
+            
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.560112809596!2d32.8608846122467!3d39.90647997140736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fa4c23558c9%3A0x18cf0ce4bc0cf152!2zQmFyYmFyb3MsIELDvGtsw7xtIENkIE5vOjY2LCAwNjY4MCDDh2Fua2F5YS9BbmthcmE!5e0!3m2!1str!2str!4v1750186649385!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
         </div>
     </div>
+    
+    <div class="cookie-consent">
+        <div class="cookie-text" data-translate="cookieText">
+            Bu web sitesi, size en iyi deneyimi sunmak için çerezleri kullanmaktadır. Daha fazla bilgi için 
+            <a href="/privacy-policy" style="color: #e67e22;">Gizlilik Politikamızı</a> inceleyebilirsiniz.
+        </div>
+        <div class="cookie-buttons">
+            <button class="cookie-btn cookie-accept" onclick="acceptCookies()" data-translate="accept">Kabul Et</button>
+            <button class="cookie-btn cookie-decline" onclick="declineCookies()" data-translate="decline">Reddet</button>
+        </div>
+    </div>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
