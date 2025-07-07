@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Open Dev Site",
+			"type": "shell",
+			"command": "start",
+			"args": [
+				"c:\\Users\\mecal\\OneDrive\\Documents\\GitHub\\4nyapi\\dev\\index.html"
+			],
+			"group": "build",
+			"isBackground": false
+		}
+	]
+}

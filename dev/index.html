@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dörten Yapı - İnşaat, yapı ve müteahhitlik hizmetleri. Ankara'da profesyonel ve güvenilir yapı çözümleri.">
-    <meta name="keywords" content="4n Yapı, Dörten Yapı, inşaat, müteahhit, yapı, Ankara, inşaat firması, müteahhitlik">
+    <meta name="description" content="Dörten Yapı - İnşaat, yapı ve müteahhitlik hizmetleri. Ankara'da profesyonel ve güvenilir yapı çözümleri." data-translate="meta-description">
+    <meta name="keywords" content="4n Yapı, Dörten Yapı, inşaat, müteahhit, yapı, Ankara, inşaat firması, müteahhitlik" data-translate="meta-keywords">
     <meta name="author" content="Dörten Yapı">
     <meta property="og:title" content="Dörten Yapı">
     <meta property="og:description" content="İnşaat ve yapı sektöründe profesyonel çözümler">
@@ -21,36 +21,73 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Enhanced Meta Tags for Better SEO -->
+    <meta name="theme-color" content="#084298">
+    <meta name="msapplication-TileColor" content="#084298">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/css/styles.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+    <link rel="preload" href="assets/images/4nyapi_logo.png" as="image">
+
+    <!-- DNS Prefetch for External Resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 </head>
 <body>
     <!-- Loading Overlay -->
     <div class="loading">
         <div class="loading-spinner"></div>
+        <div class="loading-text" data-translate="loading-text">Yükleniyor...</div>
     </div>    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="brand-container">
                 <a href="/" class="brand-link">
-                    <img src="assets/images/4nyapi_logo.png" alt="Dörten Yapı Sanayi Logo" class="logo">
+                    <img src="assets/images/4nyapi_logo.png" alt="Dörten Yapı Sanayi Logo" class="logo" data-translate="logo-alt">
                     <span class="company-name">Dörten Yapı</span>
                 </a>
             </div>            <div class="nav-links">
-                <a href="#kurumsal" class="nav-link">Kurumsal</a>
-                <a href="#projeler" class="nav-link">Projeler</a>
-                <a href="#hizmetler" class="nav-link">Hizmetler</a>
-                <a href="#referanslar" class="nav-link">Referanslar</a>
-                <a href="#iletisim" class="nav-link">İletişim</a>
+                <a href="#kurumsal" class="nav-link" data-translate="nav-kurumsal">Kurumsal</a>
+                <a href="#projeler" class="nav-link" data-translate="nav-projeler">Projelerimiz</a>
+                <a href="#iletisim" class="nav-link" data-translate="nav-iletisim">İletişim</a>
             </div>
             <div class="language-switcher">
                 <button type="button" class="lang-btn active" data-lang="tr">TR</button>
                 <button type="button" class="lang-btn" data-lang="en">EN</button>
             </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menüyü aç/kapat" data-translate="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+        <nav class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-links">
+                <a href="#kurumsal" class="mobile-nav-link" data-translate="nav-kurumsal">Kurumsal</a>
+                <a href="#projeler" class="mobile-nav-link" data-translate="nav-projeler">Projelerimiz</a>
+                <a href="#iletisim" class="mobile-nav-link" data-translate="nav-iletisim">İletişim</a>
+            </div>
+        </nav>
+        
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -58,38 +95,33 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
-                <h1 data-translate="hero-title">Güvenilir ve Profesyonel<br>İnşaat Çözümleri</h1>
-                <p data-translate="hero-subtitle">40 yılı aşkın tecrübemizle, hayallerinizdeki projeleri gerçeğe dönüştürüyoruz.</p>
-                <a href="#contact" class="cta-button" data-translate="hero-cta">Bizimle İletişime Geçin</a>
+                <h1 data-translate="hero-title">DÖRT DÖRTLÜK KALİTE<br>DÖRT DÖRTLÜK GÜVEN</h1>
+                <p class="hero-intro" data-translate="hero-intro">
+                    4N Yapı olarak, konut, ticari ve sanayi yapılarında kaliteyi, mühendisliği ve estetiği bir araya getiriyoruz. Ankara merkezli firmamızla, güvenli ve modern yaşam alanları inşa ediyor, geleceğe sağlam adımlar atıyoruz.
+                </p>
             </div>
-        </section>        <!-- Kurumsal Section -->
+        </section>
+
+        <!-- Kurumsal Section -->
         <section id="kurumsal" class="section">
             <div class="container">
-                <h2 class="section-title">Kurumsal</h2>
-                <div class="about-grid">
-                    <div class="about-content">
-                        <h3>Biz Kimiz?</h3>
-                        <p>1980 yılından bu yana inşaat sektöründe faaliyet gösteren Dörten Yapı Sanayi, müşteri memnuniyeti ve kalite odaklı yaklaşımıyla sektörünün öncü firmalarından biri olmayı başarmıştır.</p>
-                        
-                        <h3>Misyonumuz</h3>
-                        <p>Yenilikçi, sürdürülebilir ve kaliteli projeler üreterek, yaşam alanlarını değer katan çözümlerle buluşturmak.</p>
-                        
-                        <h3>Vizyonumuz</h3>
-                        <p>Türkiye'nin önde gelen inşaat firmalarından biri olarak, uluslararası standartlarda projeler geliştirmek ve sektöre yön veren bir marka olmak.</p>
+                <h2 class="section-title" data-translate="section-kurumsal">Kurumsal</h2>
+                
+                <!-- Company Description - Full Width -->
+                <div class="company-description">
+                    <p data-translate="about-text">4N Yapı (Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.), inşaat sektöründe güvenilirliği, kaliteyi ve mühendislik gücünü temel alan bir anlayışla faaliyet göstermektedir. Ankara merkezli şirketimiz; konut, ticari alanlar, sanayi tesisleri ve çelik/betonarme yapılar başta olmak üzere birçok alanda projelendirme ve uygulama hizmeti sunmaktadır. Alanında deneyimli teknik ekibimiz ve çözüm odaklı yaklaşımımızla, projelerin her aşamasında maksimum verimlilik ve memnuniyet hedeflenmektedir.</p>
+                </div>
+
+                <!-- Vision and Mission with Image -->
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3 data-translate="vision-title">Vizyonumuz</h3>
+                        <p data-translate="vision-text">Hedefimiz, her zaman iyi işlere imza atarak inşaat sektöründe ilk akla gelen firmalardan biri olmak ve kalite standartlarını daima ileriye taşımaktır. Modern teknolojiyle güçlendirilmiş yapılar inşa ederken, güven, estetik ve sürdürülebilirlikten ödün vermemek temel ilkemizdir. Sürekli büyüyen yapımızla oluşturduğumuz istihdam sayesinde, yalnızca sektöre değil, ülke ekonomisine de değer katmayı amaçlıyoruz.</p>
+                        <h3 data-translate="mission-title">Misyonumuz</h3>
+                        <p data-translate="mission-text">Güvenilirliğimiz, kaliteye olan bağlılığımız ve profesyonel yaklaşımımızla sektörde örnek gösterilen bir firma olmak için çalışıyoruz. Her projeye aynı özeni göstermek ve müşterilerimize en yüksek standartlarda hizmet sunmak asli görevimizdir. Uzman ve eğitimli kadromuza yaptığımız yatırımlarla, modern mühendislik çözümlerini bir araya getiriyor; başarıyı sürdürülebilir kılmayı hedefliyoruz.</p>
                     </div>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">40+</span>
-                            <span class="stat-label">Yıllık Deneyim</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Tamamlanan Proje</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">Mutlu Müşteri</span>
-                        </div>
+                    <div class="about-image-container">
+                        <img src="assets\images\61be3fb6c455c23aa42cf7f1_electricity-station-handshake-2021-08-26-15-42-55-utc.jpg" alt="Construction Services" class="about-image">
                     </div>
                 </div>
             </div>
@@ -98,148 +130,775 @@
         <!-- Projeler Section -->
         <section id="projeler" class="section">
             <div class="container">
-                <h2 class="section-title">Projeler</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="assets/images/project1.jpg" alt="Konut Projesi" class="project-image">
-                        <div class="project-info">
-                            <h3>Modern Yaşam Kompleksi</h3>
-                            <p>Çankaya'da 10.000 m² alan üzerine kurulu, 120 daireli modern yaşam kompleksi</p>
-                            <span class="project-status">Tamamlandı - 2024</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="assets/images/project2.jpg" alt="Ofis Projesi" class="project-image">
-                        <div class="project-info">
-                            <h3>İş Merkezi</h3>
-                            <p>Ankara'nın merkezinde A+ ofis projesi</p>
-                            <span class="project-status">Devam Ediyor</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="assets/images/project3.jpg" alt="Rezidans Projesi" class="project-image">
-                        <div class="project-info">
-                            <h3>Lüks Rezidans</h3>
-                            <p>Yüksek kaliteli malzeme ve işçilikle inşa edilen rezidans projesi</p>
-                            <span class="project-status">Planlama Aşamasında</span>
-                        </div>
+                <h2 class="section-title" data-translate="section-projeler">Projelerimiz</h2>
+                <p class="projects-intro" data-translate="projects-intro">4N Yapı, kuruluşundan bu yana birçok başarılı projeye imza atmıştır. Konut, iş merkezi ve endüstriyel yapı kategorilerinde uzmanlaşmış ekibimizle; işlevsel, estetik ve yönetmeliklere tam uyumlu yapılar tasarlayıp hayata geçiriyoruz. Referans projelerimiz, mühendislik hassasiyeti ve kullanıcı memnuniyetini bir arada sunan çözümlerimizle şekilleniyor.</p>
+                
+                <!-- Featured Projects with Images -->
+                <h3 class="subsection-title" data-translate="featured-projects">Öne Çıkan Projelerimiz</h3>
+                
+                <div class="container">
+                    <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/images/projects/Atakule GYO Arjantin Caddesi Ofis Binası.jpg" alt="Atakule GYO Ofis Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Atakule GYO Ofis Binası</h3>
+                        <p class="project-location">Gaziosmanpaşa, Arjantin Caddesi, Çankaya/ANKARA</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Hizmetler Section -->
-        <section id="hizmetler" class="section">
-            <div class="container">
-                <h2 class="section-title">Hizmetler</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <i class="fas fa-building"></i>
-                        <h3>Konut Projeleri</h3>
-                        <p>Modern yaşam alanları, rezidanslar ve toplu konut projeleri</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-industry"></i>
-                        <h3>Ticari Yapılar</h3>
-                        <p>İş merkezleri, ofis binaları ve ticari kompleksler</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-hard-hat"></i>
-                        <h3>Müteahhitlik</h3>
-                        <p>Profesyonel müteahhitlik ve proje yönetimi hizmetleri</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-drafting-compass"></i>
-                        <h3>Mimari Tasarım</h3>
-                        <p>Yenilikçi ve fonksiyonel mimari çözümler</p>
+                <div class="project-card">
+                    <img src="assets/images/projects/Enpro Beyaz Zambaklar Sokağı.png" alt="ENPRO Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">ENPRO Binası</h3>
+                        <p class="project-location">Gaziosmanpaşa, Beyaz Zambaklar Sk. Çankaya/ANKARA</p>
                     </div>
                 </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Çetin Emeç Doğan Otomotiv.jpg" alt="Doğan Otomotiv" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Doğan Otomotiv</h3>
+                        <p class="project-location">Çetin Emeç Caddesi, Balgat/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Atakule GYO Farabi Ofis Binası.jpg" alt="Atakule GYO Farabi Ofis Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Atakule GYO Farabi Ofis Binası</h3>
+                        <p class="project-location">Farabi Sokak, Çankaya/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/YMMO Binası Beyaz Zambaklar Sokağı.png" alt="YMMO Genel Merkezi" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">YMMO Genel Merkezi</h3>
+                        <p class="project-location">Beyaz Zambaklar Sokağı, Kızılay/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/H.Ü. Beytepe Stadı.jpg" alt="Hacettepe Üniversitesi Stadyum" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Hacettepe Üniversitesi Stadyum</h3>
+                        <p class="project-location">Beytepe/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Les Mikrogen Hastanesi Reşit Galip.jpg" alt="Les Mikrogen Hastanesi" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Les Mikrogen Hastanesi</h3>
+                        <p class="project-location">Reşit Galip Caddesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Büyükhanlı Park Orman Villaları - İncek.jpg" alt="Büyükhanlı Park Orman Villaları" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Büyükhanlı Park Orman Villaları</h3>
+                        <p class="project-location">İncek/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Beytepe Manzara Orman Evleri.jpeg" alt="Beytepe Manzara Orman Evleri" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Beytepe Manzara Orman Evleri</h3>
+                        <p class="project-location">Beytepe/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Birlik Mahallesi Yaşam Hastanesi.jpg" alt="Birlik Mahallesi Yaşam Hastanesi" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Birlik Mahallesi Yaşam Hastanesi</h3>
+                        <p class="project-location">Birlik Mahallesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Cinnah Caddesi Ofis Binası.jpg" alt="Cinnah Caddesi Ofis Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Cinnah Caddesi Ofis Binası</h3>
+                        <p class="project-location">Cinnah Caddesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Hollanda Caddesi Ofis Binası.jpg" alt="Hollanda Caddesi Ofis Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Hollanda Caddesi Ofis Binası</h3>
+                        <p class="project-location">Hollanda Caddesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İlkbahar Mahallesi Ersoy Hukuk Binası.jpg" alt="Ersoy Hukuk Bürosu" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Ersoy Hukuk Bürosu</h3>
+                        <p class="project-location">İlkbahar Mahallesi, Yıldız/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İlkbahar Mahallesi Ofis Binası.jpg" alt="İlkbahar Mahallesi Ofis Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İlkbahar Mahallesi Ofis Binası</h3>
+                        <p class="project-location">İlkbahar Mahallesi, Yıldız/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Yakupoğlu Binası - Arjantin Caddesi.jpg" alt="Yakupoğlu Tekstil Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Yakupoğlu Tekstil Binası</h3>
+                        <p class="project-location">Arjantin Caddesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/61aa0567af5e9b75e2a115f8_İlkbahar Mahallesi Ofis Binası (6).jpg" alt="İlkbahar Mahallesi Ofis Binası (6)" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İlkbahar Mahallesi Ofis Binası (6)</h3>
+                        <p class="project-location">İlkbahar Mahallesi, Yıldız/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Atakule GYO Arjantin Caddesi Ofis Binası (2).jpg" alt="Atakule GYO Arjantin Caddesi Ofis Binası (2)" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Atakule GYO Arjantin Caddesi Ofis Binası (2)</h3>
+                        <p class="project-location">Arjantin Caddesi, Çankaya/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Büyükhanlı Park Orman (5).jpg" alt="Büyükhanlı Park Orman (5)" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Büyükhanlı Park Orman (5)</h3>
+                        <p class="project-location">İncek/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Büyükhanlı Park Orman.jpg" alt="Büyükhanlı Park Orman" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Büyükhanlı Park Orman</h3>
+                        <p class="project-location">İncek/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Doğan Otomativ - Çetin Emeç Caddesi.jpg" alt="Doğan Otomotiv - Çetin Emeç" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Doğan Otomotiv - Çetin Emeç</h3>
+                        <p class="project-location">Çetin Emeç Caddesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/H.Ü. Beytepe Stadı (2).jpg" alt="Hacettepe Üniversitesi Stadyum (2)" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Hacettepe Üniversitesi Stadyum (2)</h3>
+                        <p class="project-location">Beytepe/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Hollanda Caddesi Ofis Binası 2.png" alt="Hollanda Caddesi Ofis Binası 2" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Hollanda Caddesi Ofis Binası 2</h3>
+                        <p class="project-location">Hollanda Caddesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Konut 2.jpg" alt="Konut Projesi 2" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Konut Projesi 2</h3>
+                        <p class="project-location">ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Konut.jpg" alt="Konut Projesi" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Konut Projesi</h3>
+                        <p class="project-location">ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Les Mikrogen Hastanesi - Reşit Galip Sokak.jpg" alt="Les Mikrogen Hastanesi - Reşit Galip" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Les Mikrogen Hastanesi - Reşit Galip</h3>
+                        <p class="project-location">Reşit Galip Sokak/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Les Mikrogen Hastanesi Reşit Galip 2.jpg" alt="Les Mikrogen Hastanesi 2" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Les Mikrogen Hastanesi 2</h3>
+                        <p class="project-location">Reşit Galip Caddesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Les Mikrogen Hastanesi Reşit Galip 3.jpg" alt="Les Mikrogen Hastanesi 3" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Les Mikrogen Hastanesi 3</h3>
+                        <p class="project-location">Reşit Galip Caddesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Nenehatun Caddesi Büyükhanlı Binası.jpg" alt="Nenehatun Caddesi Büyükhanlı Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Nenehatun Caddesi Büyükhanlı Binası</h3>
+                        <p class="project-location">Nenehatun Caddesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Nizapark Otel Farabi Sokak.jpg" alt="Nizapark Otel" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Nizapark Otel</h3>
+                        <p class="project-location">Farabi Sokak/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Ofis Binası.jpg" alt="Ofis Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Ofis Binası</h3>
+                        <p class="project-location">ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/Çetin Emeç Doğan Otomotiv (2).jpg" alt="Çetin Emeç Doğan Otomotiv (2)" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Çetin Emeç Doğan Otomotiv (2)</h3>
+                        <p class="project-location">Çetin Emeç Caddesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İlkbahar Mahallesi Haydar Boz Binası.jpg" alt="İlkbahar Mahallesi Haydar Boz Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İlkbahar Mahallesi Haydar Boz Binası</h3>
+                        <p class="project-location">İlkbahar Mahallesi, Yıldız/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İlkbahar Mahallesi Karabacak Emlak.jpg" alt="İlkbahar Mahallesi Karabacak Emlak" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İlkbahar Mahallesi Karabacak Emlak</h3>
+                        <p class="project-location">İlkbahar Mahallesi, Yıldız/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İlkbahar Mahallesi Ofis Binası (2).jpg" alt="İlkbahar Mahallesi Ofis Binası (2)" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İlkbahar Mahallesi Ofis Binası (2)</h3>
+                        <p class="project-location">İlkbahar Mahallesi, Yıldız/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İlkbahar Mahallesi Ofis Binası (3).jpg" alt="İlkbahar Mahallesi Ofis Binası (3)" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İlkbahar Mahallesi Ofis Binası (3)</h3>
+                        <p class="project-location">İlkbahar Mahallesi, Yıldız/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İlkbahar Mahallesi Ofis Binası (4).jpg" alt="İlkbahar Mahallesi Ofis Binası (4)" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İlkbahar Mahallesi Ofis Binası (4)</h3>
+                        <p class="project-location">İlkbahar Mahallesi, Yıldız/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İlkbahar Mahallesi Ofis Binası 2.jpg" alt="İlkbahar Mahallesi Ofis Binası 2" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İlkbahar Mahallesi Ofis Binası 2</h3>
+                        <p class="project-location">İlkbahar Mahallesi, Yıldız/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İlkbahar Mahallesi Sargın İnşaat.jpg" alt="İlkbahar Mahallesi Sargın İnşaat" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İlkbahar Mahallesi Sargın İnşaat</h3>
+                        <p class="project-location">İlkbahar Mahallesi/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İncek Kızılcaşar Özel Villa.jpg" alt="İncek Kızılcaşar Özel Villa" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İncek Kızılcaşar Özel Villa</h3>
+                        <p class="project-location">İncek, Kızılcaşar/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İncek Kızılcaşar İşyeri Binası.jpg" alt="İncek Kızılcaşar İşyeri Binası" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">İncek Kızılcaşar İşyeri Binası</h3>
+                        <p class="project-location">İncek, Kızılcaşar/ANKARA</p>
+                    </div>
+                </div>
+                </div>
+                </div>
             </div>
-        </section>
-
-        <!-- Referanslar Section -->
-        <section id="referanslar" class="section">
+            
+            <!-- Detailed Projects List -->
             <div class="container">
-                <h2 class="section-title">Referanslar</h2>
-                <div class="testimonials-slider">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Dörten Yapı ile çalışmak büyük bir memnuniyetti. Profesyonel yaklaşımları ve kaliteli iş anlayışları ile beklentilerimizin ötesine geçtiler."</p>
-                            <div class="testimonial-author">
-                                <strong>Ahmet Yılmaz</strong>
-                                <span>ABC Holding CEO</span>
-                            </div>
-                        </div>
+                <h3 class="subsection-title" data-translate="all-projects">Tüm Projelerimiz</h3>
+                
+                <div class="container">
+                    <div class="all-projects-grid">
+                    <div class="project-item">
+                        <h4>Atakule GYO Farabi Ofis Binası</h4>
+                        <p class="project-details">Arjantin Caddesi/ANKARA</p>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Projemizi zamanında ve kaliteli bir şekilde tamamladılar. Tüm süreç boyunca şeffaf ve profesyonel bir iletişim kurdular."</p>
-                            <div class="testimonial-author">
-                                <strong>Mehmet Kaya</strong>
-                                <span>XYZ Şirketler Grubu</span>
-                            </div>
-                        </div>
+                    <div class="project-item">
+                        <h4>Atakule GYO Farabi Sokak Binası</h4>
+                        <p class="project-details">Çankaya/ANKARA</p>
                     </div>
+                    <div class="project-item">
+                        <h4>Süleyman Bölünmez Ofis Binası</h4>
+                        <p class="project-details">Mutlukent/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Osman Cengiz Gürer Villası</h4>
+                        <p class="project-details">Yaşamkent/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Ümit Kemal Tüfekçi Binası</h4>
+                        <p class="project-details">Anıttepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Yüngül Binası</h4>
+                        <p class="project-details">Beyaz Zambaklar Sokağı/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>YMMO Genel Merkezi</h4>
+                        <p class="project-details">Kızılay/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Beytepe Kampüsü Kültür ve Kongre Merkezi</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Beyaz Ev Sosyal Tesisi Tadilatı</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Telekom Kurumu Piyasa Gözetimi Laboratuvar Binası</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Teknokent Monrol Nükleer Ürünler Ticaret ve Sanayi A.Ş Binası</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Stadyum ve IAAF Onaylı Atletizm Pisti</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Atletizm Sahası Soyunma Odaları</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Öğretim Üyeleri Kafeteryası ve Konferans Salonları Tadilatı</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Merkez Kampüs Öğretim Üyeleri Kafeteryası Tadilatı</h4>
+                        <p class="project-details">Sıhhıye/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Otopark, Kafeterya ve Spor Kompleksi</h4>
+                        <p class="project-details">Sıhhıye/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Öğrenci Yurtları Kantini Tadilatı</h4>
+                        <p class="project-details">Sıhhıye/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Öğrenci Yurtları Çatıları Tadilatı</h4>
+                        <p class="project-details">Sıhhıye/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Kampüs İçi Kaldırımların Yapılması</h4>
+                        <p class="project-details">Sıhhıye/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Otobüs Durağı ve Hareket Memurluğu Ofisi</h4>
+                        <p class="project-details">Sıhhıye/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Elektrik Elektronik Mühendisliği Islak Hacimleri Tadilatı</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Fen Fakültesi Biyoloji Bölümü Islak Hacimleri Tadilatı</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hacettepe Üniversitesi Spor Bilimleri Yüksek Okulu İstinad Duvarı</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Ersoy Hukuk Bürosu Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Özerdemler Madencilik Sanayi Ticaret A.Ş Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>BS Yatırım A.Ş Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Koltek A.Ş Merkez Binası Kaba İnşaatı</h4>
+                        <p class="project-details">Gaziosmanpaşa/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Barış İnşaat Sanayi ve Ticaret A.Ş Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Görkem İnşaat Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>GNC Türkiye A.Ş Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Yıldızlar Holding Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Enpro Mühendislik, Müşavirlik, Taahhüt ve Dış Ticaret Ltd. Şti. Merkez Binası</h4>
+                        <p class="project-details">Gaziosmanpaşa/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Koşansu İş Merkezi</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>BS Yatırım A.Ş Ek Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Doğan Otomotiv Showroom Binası</h4>
+                        <p class="project-details">Balgat/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Sarıcılar A.Ş Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Üstyapı A.Ş Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Haydar Boz Yalıtım Sanayi ve Ticaret Ltd. Şti. Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Mas İmar Harita İnşaat Turizm Ticaret Ltd. Şti. Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Özdoğu İnşaat ve Ticaret Ltd. Şti. Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Yakupoğlu Tekstil ve Deri Sanayi Ticaret A.Ş Binası</h4>
+                        <p class="project-details">Arjantin Caddesi/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Erdoğan Ertuğrul Binası</h4>
+                        <p class="project-details">Arjantin Caddesi/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Eska Elektrik Mühendislik Sanayi Ticaret Ltd.Şti. Binası</h4>
+                        <p class="project-details">Arjantin Caddesi/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>37 Dairelik Çamlık Apartmanı (Gürler A.Ş Ortaklığıyla)</h4>
+                        <p class="project-details">Oran/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Büyükhanlı Binası</h4>
+                        <p class="project-details">Çankaya Caddesi/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Les Mikrogen Hastanesi</h4>
+                        <p class="project-details">Reşit Galip Caddesi/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Sait Ulusoy Villası</h4>
+                        <p class="project-details">Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>S.S. AY YILDIZ SANCAK KONUT YAPI KOOPERATİFİ</h4>
+                        <p class="project-details">76 Adet Daire İle Altyapı Ve Çevre Düzenlemesi - Beytepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>İbrahim Güngör Binası</h4>
+                        <p class="project-details">Bağlıca/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Aykut Önay Ofis Binası</h4>
+                        <p class="project-details">Cinnah/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Öncü Yatırım İnşaat Ticaret A.Ş. Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Nadire Özbek Villası</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Togan Özliyen Sağlık Merkezi ve Kreş</h4>
+                        <p class="project-details">Gaziosmanpaşa/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>36 Dairelik Vadi İkizleri Sitesi (Gürler A.Ş Ortaklığıyla)</h4>
+                        <p class="project-details">Çankaya/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Ulusoy Söğütözü Tesisleri</h4>
+                        <p class="project-details">Söğütözü/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>ANKARA Yeminli Mali Müşavirler Odası Hizmet Binası</h4>
+                        <p class="project-details">Gaziosmanpaşa/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Türk Telekom İletişim Başkanlığı Binası</h4>
+                        <p class="project-details">Balgat/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Büyükhanlı 15 Adet Villa, Yüzme Havuzu ve Çevre Düzenlemesi</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Büyükhanlı Atakule Binası</h4>
+                        <p class="project-details">Çankaya/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Büyükhanlı Nenehatun Caddesi Binası</h4>
+                        <p class="project-details">Gaziosmanpaşa/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Büyükhanlı Kırlangıç Sokak Binası</h4>
+                        <p class="project-details">Gaziosmanpaşa/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Erol Turaçlı Binası</h4>
+                        <p class="project-details">Gaziosmanpaşa/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Ali Taşçıer Binası</h4>
+                        <p class="project-details">Gaziosmanpaşa/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hikmet Karadeniz Villası</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Sabri Doğan Villası</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Mesut Özdemir Villası</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hasan Çalışkan Villası</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Şahin Kozan Villası</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Yavuz Çalışkan Villası</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>KFS İnşaat Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Home Center Showroom Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Eska Elektrik Mühendislik Sanayi Ticaret Ltd. Şti. İkiz Binaları</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Birleşik Arap Emirlikleri Askeri Ateşeliği Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Şahin Karaoğuz İş Merkezi</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Orhan Evin Merkez Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Oya Balcıoğlu Villası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Nihat Arıduru Villası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Saadet Kavak Villası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Vedat Kavak Villası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Murat Kavak Villası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Ömer Balku Villası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Şükrü Karabacak Villası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Çiğdem Aker Villası</h4>
+                        <p class="project-details">Beysukent/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Ayhan Yalçın Villası</h4>
+                        <p class="project-details">Beysukent/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>İsmail Özliyen Villası</h4>
+                        <p class="project-details">Çayyolu/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Hakan Dermancı Villası Kaba İnşaatı</h4>
+                        <p class="project-details">Çayyolu/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Önbilgin Villası İnce İnşaatı</h4>
+                        <p class="project-details">Beysukent/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Özgür İncekara Villası İnce İnşaatı</h4>
+                        <p class="project-details">Beysukent/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Fransız Okulu Eğitim Binası</h4>
+                        <p class="project-details">Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>İş-Net Hizmet Binası Tadilatı</h4>
+                        <p class="project-details">Kavaklıdere/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Betemar Sağlık Hizmetleri Poliklinik Binası 2.Kısım</h4>
+                        <p class="project-details">Cebeci/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>High-Tech Optik Fabrika Binası</h4>
+                        <p class="project-details">Etimesgut/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Kartaş A.Ş Tofaş Servis Tadilatı</h4>
+                        <p class="project-details">Maltepe/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Özel Bina İnşaatı</h4>
+                        <p class="project-details">Bestekar Sokak No:44 - Kavaklıdere/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Özel Bina İnşaatı</h4>
+                        <p class="project-details">Turan Güneş Bulvarı No:60 - Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Özel Bina İnşaatı</h4>
+                        <p class="project-details">Turan Güneş Bulvarı No:62 - Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Özel Bina İnşaatı</h4>
+                        <p class="project-details">Turan Güneş Bulvarı No:64 - Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Özel Bina İnşaatı</h4>
+                        <p class="project-details">Turan Güneş Bulvarı 4.Cadde No:29 - Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Özel Bina İnşaatı</h4>
+                        <p class="project-details">Turan Güneş Bulvarı 4.Cadde No:23 - Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Özel Bina İnşaatı</h4>
+                        <p class="project-details">Turan Güneş Bulvarı 4.Cadde No:85 - Yıldız/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Büyükhanlı Park Orman Villaları</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Vadi İkizleri Sitesi (Gürler A.Ş Ortaklığıyla)</h4>
+                        <p class="project-details">Çankaya/ANKARA</p>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
 
         <!-- İletişim Section -->
-        <section id="iletisim" class="section">
+        <section id="iletisim" class="section contact-section">
             <div class="container">
-                <h2 class="section-title">İletişim</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h3>Adres</h3>
-                                <p>Büklüm Sk. No: 66/2,<br>Kavaklıdere, Çankaya/ANKARA</p>
+                <h2 class="section-title" data-translate="section-iletisim">İletişim</h2>
+                <p class="contact-intro" data-translate="contact-intro">4N Yapı ile projelerinizi güvenle hayata geçirmek için bizimle iletişime geçin. Ofisimiz Ankara’nın Çankaya ilçesinde yer almakta olup, telefon veya e-posta aracılığıyla bize kolayca ulaşabilirsiniz. Dilerseniz aşağıdaki form üzerinden de bize mesaj gönderebilirsiniz – en kısa sürede dönüş sağlanacaktır.</p>
+                
+                <!-- Contact Items - No Container -->
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Büklüm Sk. No: 66/2, Kavaklıdere, Çankaya/ANKARA</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+90 (312) 426 07 78</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@4nyapi.com">info@4nyapi.com</a>
+                </div>
+
+                <!-- Contact Form and Map Grid -->
+                <div class="contact-content-grid">
+                    <!-- Simplified Contact Form -->
+                    <div class="contact-form-container">
+                        <h3 data-translate="contact-form-title">İletişim Formu</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="contact-form-fields">
+                                <label for="name" class="sr-only" data-translate="form-name">Adınız</label>
+                                <input type="text" id="name" name="name" data-translate-placeholder="form-name-placeholder" placeholder="Adınız *" required>
+                                <label for="email" class="sr-only" data-translate="form-email">E-posta Adresiniz</label>
+                                <input type="email" id="email" name="email" data-translate-placeholder="form-email-placeholder" placeholder="E-posta Adresiniz *" required>
+                                <label for="phone" class="sr-only" data-translate="form-phone">Telefon Numaranız</label>
+                                <input type="tel" id="phone" name="phone" data-translate-placeholder="form-phone-placeholder" placeholder="Telefon Numaranız">
+                                <label for="message" class="sr-only" data-translate="form-message">Mesajınız</label>
+                                <textarea id="message" name="message" data-translate-placeholder="form-message-placeholder" placeholder="Mesajınız *" rows="4" required></textarea>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h3>Telefon</h3>
-                                <p>+90 (312) 426 07 78</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h3>E-posta</h3>
-                                <p>info@4nyapi.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Adınız" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="E-posta Adresiniz" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="phone" name="phone" placeholder="Telefon Numaranız">
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Mesajınız" required></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn">Gönder</button>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                <span data-translate="form-submit">Gönder</span>
+                            </button>
                         </form>
                     </div>
-                </div>
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.560112809596!2d32.8608846122467!3d39.90647997140736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fa4c23558c9%3A0x18cf0ce4bc0cf152!2zQmFyYmFyb3MsIELDvGtsw7xtIENkIE5vOjY2LCAwNjY4MCDDh2Fua2F5YS9BbmthcmE!5e0!3m2!1str!2str!4v1750186649385!5m2!1str!2str"
-                        width="100%" 
-                        height="400" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    
+                    <!-- Google Maps -->
+                    <div class="map-container">
+                        <h3 data-translate="map-title">Ofis Konumumuz</h3>
+                        <div class="map-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.560112809596!2d32.8608846122467!3d39.90647997140736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fa4c23558c9%3A0x18cf0ce4bc0cf152!2zQmFyYmFyb3MsIELDvGtsw7xtIENkIE5vOjY2LCAwNjY4MCDDh2Fua2F5YS9BbmthcmE!5e0!3m2!1str!2str!4v1750186649385!5m2!1str!2str"
+                                width="100%"
+                                height="350"
+                                class="contact-map"
+                                allowfullscreen=""
+                                loading="lazy"
+                                title="Dörten Yapı Sanayi Konumu">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -247,19 +906,27 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <!-- Content will be added -->
-    </footer>
-
-    <!-- Cookie Consent -->
-    <div class="cookie-consent">
-        <p class="cookie-text" data-translate="cookie-text">
-            Bu web sitesi, size en iyi deneyimi sunmak için çerezleri kullanmaktadır.
-        </p>
-        <div class="cookie-buttons">
-            <button class="cookie-btn accept" data-translate="cookie-accept">Kabul Et</button>
-            <button class="cookie-btn decline" data-translate="cookie-decline">Reddet</button>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <img src="assets/images/4nyapi_logo.png" alt="Dörten Yapı Logo" class="footer-logo" data-translate="logo-alt">
+                    <p class="footer-text" data-translate="footer-description">
+                        Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.<br>
+                        İnşaat ve yapı sektöründe kalite, güvenilirlik ve mühendislik mükemmelliği ile hizmet vermekteyiz.
+                    </p>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-translate="footer-contact-title">İletişim</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Büklüm Sk. No: 66/2, Kavaklıdere, Çankaya/ANKARA</p>
+                    <p><i class="fas fa-phone"></i> +90 (312) 426 07 78</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@4nyapi.com">info@4nyapi.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer-copyright">&copy; 2025 Dörten Yapı Sanayi. Tüm hakları saklıdır.</p>
+            </div>
         </div>
-    </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
