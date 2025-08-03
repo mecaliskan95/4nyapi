@@ -1,7 +1,7 @@
 const translations = {
     tr: {
         "hero-title": "DÖRT DÖRTLÜK KALİTE<br>DÖRT DÖRTLÜK GÜVEN",
-        "hero-intro": "4N Yapı olarak, konut, ticari ve sanayi yapılarında kaliteyi, mühendisliği ve estetiği bir araya getiriyoruz. Ankara merkezli firmamızla, güvenli ve modern yaşam alanları inşa ediyor, geleceğe sağlam adımlar atıyoruz.",
+        "hero-intro": "4N Yapı olarak, konut, ticari ve sanayi yapılarında kaliteyi, mühendisliği ve estetiği bir araya getiriyoruz. Ankara merkezli firmamızla, güvenilir ve modern yaşam alanları inşa ediyor, geleceğe sağlam adımlar atıyoruz.",
         "nav-kurumsal": "Kurumsal",
         "nav-projeler": "Projelerimiz",
         "nav-iletisim": "İletişim",
@@ -9,12 +9,12 @@ const translations = {
         "section-kurumsal": "Kurumsal",
         "section-projeler": "Projelerimiz",
         "section-iletisim": "İletişim",
-        "about-text": "4N Yapı (Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.), inşaat sektöründe güvenilirliği, kaliteyi ve mühendislik gücünü temel alan bir anlayışla faaliyet göstermektedir. Ankara merkezli şirketimiz; konut, ticari alanlar, sanayi tesisleri ve çelik/betonarme yapılar başta olmak üzere birçok alanda projelendirme ve uygulama hizmeti sunmaktadır. Alanında deneyimli teknik ekibimiz ve çözüm odaklı yaklaşımımızla, projelerin her aşamasında maksimum verimlilik ve memnuniyet hedeflenmektedir.",
+        "about-text": "4N Yapı (Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.), inşaat sektöründe güvenilirlik, kalite ve mühendislik mükemmelliğini temel alan profesyonel bir anlayışla hizmet vermektedir. Ankara merkezli şirketimiz; konut, ticari alanlar, sanayi tesisleri ve çelik/betonarme yapılar başta olmak üzere geniş bir yelpazede projelendirme ve uygulama hizmeti sunmaktadır. Alanında uzman teknik ekibimiz ve çözüm odaklı yaklaşımımızla, projelerin her aşamasında maksimum verimlilik ve müşteri memnuniyeti hedeflenmektedir.",
         "vision-title": "Vizyonumuz",
         "vision-text": "Hedefimiz, daima iyi işlere imza atarak alanımızda ilk akla gelen isimlerden biri olmak, sektördeki kalitenin sürekli yükselmesini sağlamaktır. Ayrıca sürekli büyüme ile sağlayacağımız istihdam, ülke ekonomisine katkıda bulunacaktır.",
         "mission-title": "Misyonumuz",
         "mission-text": "Güvenilirliğimiz, kalite anlayışımız ve profesyonel yaklaşımımızla sektörde örnek olmak, her projeye aynı özeni yansıtmak asli görevimizdir. Amacımız modern teknolojiyle, uzman ve eğitimli kadrolara yatırım yaparak başarıyı her zaman en üst seviyede tutabilmektir.",
-        "projects-intro": "4N Yapı, kuruluşundan bu yana birçok başarılı projeye imza atmıştır. Konut, iş merkezi ve endüstriyel yapı kategorilerinde uzmanlaşmış ekibimizle; işlevsel, estetik ve yönetmeliklere tam uyumlu yapılar tasarlayıp hayata geçiriyoruz. Referans projelerimiz, mühendislik hassasiyeti ve kullanıcı memnuniyetini bir arada sunan çözümlerimizle şekilleniyor.",
+        "projects-intro": "4N Yapı, kuruluşundan bu yana birçok başarılı projeye imza atmıştır. Konut, iş merkezi ve endüstriyel yapı kategorilerinde uzmanlaşmış ekibimizle; işlevsel, estetik ve yönetmeliklere tam uyumlu yapılar tasarlayıp hayata geçiriyoruz. Referans projelerimiz, mühendislik hassasiyeti ve kullanıcı memnuniyetini bir arada sunan profesyonel çözümlerimizle şekillenmektedir.",
         "featured-projects": "Öne Çıkan Projelerimiz",
         "all-projects": "Tüm Projelerimiz",
         "residential-projects": "Konut Projeleri",
@@ -49,7 +49,9 @@ const translations = {
         "logo-alt": "Dörten Yapı Sanayi Logo",
         "meta-description": "Dörten Yapı - İnşaat, yapı ve müteahhitlik hizmetleri. Ankara'da profesyonel ve güvenilir yapı çözümleri.",
         "meta-keywords": "4n Yapı, Dörten Yapı, inşaat, müteahhit, yapı, Ankara, inşaat firması, müteahhitlik",
-        "loading-text": "Yükleniyor..."
+        "loading-text": "Yükleniyor...",
+        "btn-view-projects": "Projelerimizi İnceleyin",
+        "btn-contact-us": "İletişime Geçin"
     },
     en: {
         "hero-title": "PERFECT QUALITY<br>PERFECT TRUST",
@@ -99,9 +101,11 @@ const translations = {
         "footer-contact-title": "Contact",
         "footer-copyright": "&copy; 2025 Dörten Yapı Sanayi. All rights reserved.",
         "logo-alt": "Dörten Yapı Sanayi Logo",
-        "meta-description": "Dörten Yapı - Construction, building and contracting services. Professional and reliable construction solutions in Ankara.",
-        "meta-keywords": "4n Yapı, Dörten Yapı, construction, contractor, building, Ankara, construction company, contracting",
-        "loading-text": "Loading..."
+        "meta-description": "Dörten Yapı - Construction, building and contracting services. Professional and reliable building solutions in Ankara.",
+        "meta-keywords": "4n Construction, Dörten Yapı, construction, contractor, building, Ankara, construction company, contracting",
+        "loading-text": "Loading...",
+        "btn-view-projects": "View Our Projects",
+        "btn-contact-us": "Contact Us"
     }
 };
 
@@ -170,6 +174,23 @@ function initializeSimpleEffects() {
         if (!image.hasAttribute('loading')) {
             image.setAttribute('loading', 'lazy');
         }
+    });
+    
+    // Add click handlers for gallery images to open in new tab
+    const galleryImages = document.querySelectorAll('.gallery-slide img');
+    galleryImages.forEach(image => {
+        image.style.cursor = 'pointer';
+        image.addEventListener('click', (e) => {
+            // Prevent event bubbling to avoid triggering gallery navigation
+            e.stopPropagation();
+            
+            // Find the currently active slide's image
+            const gallery = image.closest('.project-gallery');
+            const activeSlide = gallery.querySelector('.gallery-slide.active');
+            const activeImage = activeSlide.querySelector('img');
+            
+            window.open(activeImage.src, '_blank');
+        });
     });
     
     // Add click handlers for language buttons
@@ -624,6 +645,37 @@ function initializePerformanceMonitoring() {
     }
 }
 
+// Initialize scroll animations - DISABLED
+function initializeScrollAnimations() {
+    // Scroll animations disabled per user request
+    return;
+    
+    // Create intersection observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '50px'
+    });
+    
+    // Observe all fade-in-up elements
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+        el.style.animationPlayState = 'paused';
+        observer.observe(el);
+    });
+    
+    // Add stagger effect to project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+}
+
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Remove loading screen quickly
@@ -645,6 +697,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize simple effects
     initializeSimpleEffects();
+    
+    // Initialize scroll animations
+    initializeScrollAnimations();
     
     // Initialize mobile navigation
     const mobileNav = new MobileNavigation();
@@ -850,6 +905,52 @@ class ProgressIndicator {
             this.progressBar.style.width = scrolled + '%';
         }
     }
+}
+
+// Gallery functionality
+function changeSlide(button, direction) {
+    const gallery = button.closest('.project-gallery');
+    const slides = gallery.querySelectorAll('.gallery-slide');
+    const indicators = gallery.querySelectorAll('.indicator');
+    
+    // Find current active slide
+    let currentIndex = 0;
+    slides.forEach((slide, index) => {
+        if (slide.classList.contains('active')) {
+            currentIndex = index;
+        }
+    });
+    
+    // Remove active class from current slide and indicator
+    slides[currentIndex].classList.remove('active');
+    indicators[currentIndex].classList.remove('active');
+    
+    // Calculate new index
+    let newIndex = currentIndex + direction;
+    if (newIndex >= slides.length) {
+        newIndex = 0;
+    } else if (newIndex < 0) {
+        newIndex = slides.length - 1;
+    }
+    
+    // Add active class to new slide and indicator
+    slides[newIndex].classList.add('active');
+    indicators[newIndex].classList.add('active');
+}
+
+function currentSlide(indicator, slideNumber) {
+    const gallery = indicator.closest('.project-gallery');
+    const slides = gallery.querySelectorAll('.gallery-slide');
+    const indicators = gallery.querySelectorAll('.indicator');
+    
+    // Remove active class from all slides and indicators
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(ind => ind.classList.remove('active'));
+    
+    // Add active class to selected slide and indicator
+    const newIndex = slideNumber - 1;
+    slides[newIndex].classList.add('active');
+    indicators[newIndex].classList.add('active');
 }
 
 //# sourceMappingURL=main.js.map
