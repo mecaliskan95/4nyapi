@@ -6,7 +6,7 @@
 			"type": "shell",
 			"command": "start",
 			"args": [
-				"c:\\Users\\mecal\\OneDrive\\Documents\\GitHub\\4nyapi\\dev\\index.html"
+				"c:\\Users\\mecal\\OneDrive\\Documents\\GitHub\\4nyapi\\index.html"
 			],
 			"group": "build",
 			"isBackground": false

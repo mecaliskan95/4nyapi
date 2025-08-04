@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\mecal\\OneDrive\\Documents\\GitHub\\4nyapi\\dev\\index.html"
+            "file": "c:\\Users\\mecal\\OneDrive\\Documents\\GitHub\\4nyapi\\index.html"
         }
     ]
 }
