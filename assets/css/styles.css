@@ -63,17 +63,17 @@
     /* Typography System - Inter Font */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     
-    /* Font Sizes - (Conservative) */
-    --font-size-xs: 0.75rem;    /* 12px - Small labels */
-    --font-size-sm: 0.875rem;   /* 14px - Navigation, buttons, small text */
-    --font-size-base: 0.875rem; /* 14px - Body text, main content (style) */
-    --font-size-lg: 1rem;       /* 16px - Larger body text */
-    --font-size-xl: 1.125rem;   /* 18px - Small headings */
-    --font-size-2xl: 1.25rem;   /* 20px - Medium headings */
-    --font-size-3xl: 1.375rem;  /* 22px - Large headings */
-    --font-size-4xl: 1.5rem;    /* 24px - Hero text */
-    --font-size-5xl: 1.75rem;   /* 28px - Main hero */
-    --font-size-6xl: 2rem;      /* 32px - Maximum size */
+    /* Font Sizes - Optimized for UX/UI Best Practices */
+    --font-size-xs: 0.75rem;    /* 12px - Small labels, captions */
+    --font-size-sm: 0.875rem;   /* 14px - Navigation, buttons, secondary text */
+    --font-size-base: 1rem;     /* 16px - Body text, main content (UX standard) */
+    --font-size-lg: 1.125rem;   /* 18px - Larger body text, important content */
+    --font-size-xl: 1.25rem;    /* 20px - Small headings, project titles */
+    --font-size-2xl: 1.375rem;  /* 22px - Medium headings, subsections */
+    --font-size-3xl: 1.5rem;    /* 24px - Large headings, section titles */
+    --font-size-4xl: 1.75rem;   /* 28px - Hero text, main headings */
+    --font-size-5xl: 2rem;      /* 32px - Main hero, primary display */
+    --font-size-6xl: 2.25rem;   /* 36px - Maximum size, special occasions */
     
     /* Font Weights - Uses Limited Weights */
     --font-light: 300;
@@ -82,10 +82,10 @@
     --font-semibold: 600;
     --font-bold: 700;
     
-    /* Line Heights - Tight Style */
-    --line-height-tight: 1.2;
-    --line-height-normal: 1.4;
-    --line-height-relaxed: 1.6;
+    /* Line Heights - Optimized for UX/Readability */
+    --line-height-tight: 1.3;     /* Improved from 1.2 for better readability */
+    --line-height-normal: 1.5;    /* Industry standard from 1.4 */
+    --line-height-relaxed: 1.7;   /* Better for long text from 1.6 */
     
     /* Spacing System - Compact Style */
     --spacing-xs: 0.25rem;   /* 4px */
@@ -280,19 +280,19 @@ section {
 }
 
 h1 {
-    font-size: var(--font-size-5xl);   /* 28px - Much smaller than before */
+    font-size: var(--font-size-4xl);   /* 28px - More proportional */
     font-weight: var(--font-bold);
     margin-bottom: var(--spacing-lg);
 }
 
 h2 {
-    font-size: var(--font-size-3xl);   /* 22px - section headings */
+    font-size: var(--font-size-3xl);   /* 24px - section headings */
     font-weight: var(--font-bold);
     margin-bottom: var(--spacing-lg);
 }
 
 h3 {
-    font-size: var(--font-size-2xl);   /* 20px - Subsection headings */
+    font-size: var(--font-size-2xl);   /* 22px - Subsection headings */
     font-weight: var(--font-bold);
     margin-bottom: var(--spacing-md);
 }
@@ -330,15 +330,16 @@ img {
 
 /* Utilities */
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    display: none !important;  /* Additional hide method */
 }
 
 .text-center { text-align: center; }
@@ -444,18 +445,12 @@ img {
         transparent 0%, 
         rgba(255, 255, 255, 0.4) 50%, 
         transparent 100%);
-    /* animation: shimmer 2s infinite; - REMOVED */
 }
-
-/* @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(200%); }
-} - REMOVED */
 
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
     max-width: var(--container-max-width);
     margin: 0 auto;
@@ -469,6 +464,10 @@ img {
     align-items: center;
     flex-shrink: 0;
     z-index: 2;
+    position: absolute;
+    left: var(--container-padding);
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .brand-link {
@@ -517,12 +516,11 @@ img {
     color: var(--text-primary);
     text-decoration: none;
     font-family: var(--font-family);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base);    /* Improved accessibility - 16px */
     font-weight: var(--font-semibold);
     padding: var(--spacing-md) 0;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
     overflow: hidden;
 }
 
@@ -534,12 +532,7 @@ img {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(44, 90, 160, 0.1), transparent);
-    /* transition: left 0.5s ease; - REMOVED */
 }
-
-/* .nav-link:hover::before {
-    left: 100%;
-} - REMOVED */
 
 .nav-link::after {
     content: '';
@@ -576,6 +569,11 @@ img {
     border-radius: 6px;
     padding: 2px;
     gap: 2px;
+    position: absolute;
+    right: var(--container-padding);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 
 .lang-btn {
@@ -590,7 +588,6 @@ img {
     border-radius: 4px;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .lang-btn:hover {
@@ -723,7 +720,6 @@ img {
     border-radius: 8px;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
     position: relative;
     overflow: hidden;
 }
@@ -868,7 +864,7 @@ img {
     border: 2px solid transparent;
     border-radius: 3px;
     font-family: var(--font-family);
-    font-size: 14px;
+    font-size: var(--font-size-base);    /* Use 16px for better accessibility */
     font-weight: 600;
     line-height: 1.4;
     text-decoration: none;
@@ -911,10 +907,7 @@ img {
     transform: translateX(2px);
 }
 
-.btn:active {
-    /* Removed transform to prevent size changes */
-    transition: none;
-}
+/* Note: Active states are handled below with !important to ensure consistency */
 
 .btn::before {
     content: '';
@@ -954,55 +947,6 @@ img {
     z-index: 2;
 }
 
-/* Primary Button - Enhanced Visibility */
-.btn-primary {
-    background: rgba(44, 90, 160, 0.1);
-    color: rgba(255, 255, 255, 0.95);
-    border: 2px solid rgba(44, 90, 160, 0.4);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: 
-        0 4px 15px rgba(44, 90, 160, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.btn-primary:hover {
-    background: rgba(44, 90, 160, 0.2);
-    border-color: rgba(44, 90, 160, 0.6);
-    color: #ffffff;
-    box-shadow: 
-        0 6px 20px rgba(44, 90, 160, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.btn-primary:active {
-    box-shadow: 
-        0 2px 8px rgba(44, 90, 160, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-/* Outline Button - Enhanced */
-.btn-outline {
-    background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 0.9);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-}
-
-.btn-outline:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 
-        0 4px 15px rgba(255, 255, 255, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.btn-outline:active {
-    background: rgba(255, 255, 255, 0.1);
-}
-
 /* Secondary Button */
 .btn-secondary {
     background: transparent;
@@ -1037,7 +981,7 @@ img {
 .btn-sm {
     padding: var(--spacing-sm) var(--spacing-md);
     font-size: var(--font-size-sm);
-    min-height: 36px;
+    min-height: 44px;    /* Improved from 36px to meet accessibility standards */
 }
 
 .btn-lg {
@@ -1079,16 +1023,21 @@ img {
     outline-offset: 2px;
 }
 
-/* Ensure buttons maintain consistent size */
-.btn:focus,
-.btn:active,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-outline:focus,
-.btn-outline:active {
+/* Ensure buttons maintain consistent size but allow subtle press effect */
+.btn:focus {
     transform: none !important;
     font-size: inherit !important;
-    padding: 1rem 2rem !important;
+    padding: 12px 24px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Allow subtle active press effect for better UX */
+.btn:active {
+    transform: translateY(1px) !important;
+    transition: transform 0.1s ease !important;
+    font-size: inherit !important;
+    padding: 12px 24px !important;
     width: auto !important;
     height: auto !important;
 }
@@ -1663,39 +1612,6 @@ img {
     width: 100%;
 }
 
-.hero-cta {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.hero-cta .btn {
-    min-width: 200px;
-    padding: 14px 28px;
-    font-weight: 600;
-    font-size: 13px;
-    text-transform: none;
-    transition: all 0.3s ease;
-}
-
-.hero-cta .btn-outline {
-    background: rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.95);
-    border: 2px solid rgba(255, 255, 255, 0.25);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-}
-
-.hero-cta .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.4);
-    color: #ffffff;
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
-}
-
 /* Sections - Enhanced with better visual hierarchy */
 .section {
     background: var(--bg-primary);
@@ -1714,6 +1630,7 @@ img {
 .contact-section.section,
 #iletisim.section {
     background: transparent !important;
+    border-top: none !important;  /* Remove any border */
 }
 
 .section:first-of-type {
@@ -1725,7 +1642,6 @@ img {
 #projeler {
     padding: var(--spacing-2xl) 0;
     background: var(--bg-primary);
-    border-top: 1px solid rgba(44, 90, 160, 0.08);
 }
 
 /* Section Titles - Enhanced with premium typography */
@@ -2227,16 +2143,6 @@ textarea.form-control {
         padding: var(--spacing-xl);
     }
     
-    .hero-cta {
-        flex-direction: column;
-        gap: 1px;
-    }
-    
-    .hero-cta .btn {
-        width: 100%;
-        max-width: 280px;
-    }
-    
     .contact-items-grid {
         grid-template-columns: 1fr;
         gap: 1px;
@@ -2306,6 +2212,31 @@ textarea.form-control {
 .featured-projects-section {
     margin: 0;
     background: var(--bg-primary);    /* Same background as main projects section */
+}
+
+/* Reduce spacing for project subsection titles */
+#projeler .subsection-title,
+#projeler-continued .subsection-title {
+    margin-bottom: 0.5rem;
+}
+
+/* Unified Projects Section */
+.projects-unified-section {
+    background: var(--bg-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.projects-unified-section .all-projects-header {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: var(--spacing-md) var(--container-padding) 0 var(--container-padding);
+    text-align: center;
+}
+
+.projects-unified-section .all-projects-header .subsection-title {
+    margin-top: var(--spacing-2xl);      /* Increased top spacing */
+    margin-bottom: var(--spacing-xl);    /* Increased bottom spacing */
 }
 
 .projects-grid {
@@ -2445,12 +2376,12 @@ p {
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(44, 90, 160, 0.04);
+    box-shadow: 0 4px 16px rgba(44, 90, 160, 0.06);
     cursor: pointer;
 }
 
 .all-projects-grid .project-item:hover {
-    box-shadow: 0 12px 32px rgba(44, 90, 160, 0.12);
+    box-shadow: 0 16px 48px rgba(44, 90, 160, 0.15);
     border-color: var(--primary-color);
     transform: translateY(-2px);
 }
@@ -2492,7 +2423,6 @@ p {
 /* Contact */
 .contact-section {
     position: relative;
-    border-top: 1px solid rgba(44, 90, 160, 0.08);
     background: transparent !important;
 }
 
@@ -2563,7 +2493,7 @@ p {
 .contact-details span,
 .contact-details a {
     color: var(--text-secondary);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base);    /* Increased from sm (14px) to base (16px) */
     line-height: var(--line-height-relaxed);
     text-decoration: none;
     transition: color var(--transition-base);
@@ -2655,6 +2585,21 @@ p {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
+}
+
+/* Ensure contact form labels are completely hidden */
+.contact-form .sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    display: none !important;
+    visibility: hidden !important;
 }
 
 .contact-form input,
@@ -2794,11 +2739,6 @@ p {
     /* animation: shimmer 2s infinite; - REMOVED */
 }
 
-/* @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(200%); }
-} - REMOVED */
-
 /* Enhanced mobile navigation with better backdrop */
 .mobile-nav {
     position: fixed;
@@ -2914,7 +2854,7 @@ p {
 
 /* Projeler Continued Section */
 #projeler-continued {
-    padding: var(--spacing-xl) 0 var(--spacing-md) 0;
+    padding: var(--spacing-md) 0 var(--spacing-sm) 0;
     background: var(--bg-primary);
 }
 
@@ -3008,11 +2948,6 @@ p {
         line-height: 1.4;
         margin-bottom: var(--spacing-md);
         padding: 0 var(--spacing-xs);
-    }
-    
-    .hero-cta .btn {
-        max-width: 240px;
-        padding: 10px 16px;
     }
     
     .nav-container {
@@ -3112,18 +3047,6 @@ p {
     .hero-content {
         padding: 0 var(--spacing-md);
         text-align: center;
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-        gap: var(--spacing-sm);
-        margin-top: var(--spacing-lg);
-    }
-    
-    .hero-cta .btn {
-        width: 100%;
-        max-width: 260px;
-        padding: 12px 20px;
     }
     
     /* Projects grid mobile - 1px gaps */
@@ -3334,16 +3257,6 @@ p {
     
     /* Hero adjustments for tablets - keep original font sizes */
     
-    .hero-cta {
-        flex-direction: row;
-        justify-content: center;
-        gap: 1px;
-    }
-    
-    .hero-cta .btn {
-        max-width: 220px;
-    }
-    
     /* Projects grid - 2 columns for tablets with 1px gaps */
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -3485,8 +3398,8 @@ p {
     }
     
     .lang-btn {
-        min-height: 40px;
-        min-width: 40px;
+        min-height: 44px;    /* Improved from 40px for better touch accessibility */
+        min-width: 44px;     /* Improved from 40px for better touch accessibility */
     }
     
     /* Remove hover effects for touch devices */
@@ -3519,10 +3432,6 @@ p {
     .hero-intro {
         margin-bottom: var(--spacing-md);
     }
-    
-    .hero-cta {
-        margin-top: var(--spacing-md);
-    }
 }
 
 /* Print styles */
@@ -3531,7 +3440,6 @@ p {
     .mobile-menu-toggle,
     .mobile-nav,
     .mobile-overlay,
-    .hero-cta,
     .loading {
         display: none !important;
     }
@@ -3695,11 +3603,6 @@ img[loading="lazy"].loaded {
     min-height: 200px;
     border-radius: var(--radius-md);
 }
-
-/* @keyframes loading-shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
-} - REMOVED */
 
 /* Premium Progress Indicator */
 .progress-bar {
@@ -3890,4 +3793,73 @@ header {
     visibility: visible !important;
     opacity: 1 !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+/* ====================================== */
+/* ADDITIONAL UI/UX IMPROVEMENTS         */
+/* ====================================== */
+
+/* Better mobile touch interactions */
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects on touch devices to prevent sticky states */
+    .btn:hover,
+    .project-card:hover,
+    .project-item:hover,
+    .contact-item:hover {
+        transform: none;
+        box-shadow: inherit;
+    }
+    
+    /* Add touch-friendly active states - more subtle */
+    .btn:active {
+        transform: translateY(1px);  /* Subtle press effect instead of scale */
+        transition: transform 0.1s ease;
+        box-shadow: 0 2px 8px rgba(44, 90, 160, 0.2);  /* Reduced shadow on press */
+    }
+    
+    .project-card:active,
+    .project-item:active {
+        transform: translateY(1px);  /* Subtle press effect */
+        transition: transform 0.1s ease;
+    }
+}
+
+/* Improved focus states for keyboard navigation */
+.btn:focus-visible,
+.nav-link:focus-visible,
+.form-control:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 1px rgba(44, 90, 160, 0.2);
+}
+
+/* Better text selection */
+::selection {
+    background-color: rgba(44, 90, 160, 0.2);
+    color: var(--text-primary);
+}
+
+/* Smooth scrolling for better UX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --border-light: #000000;
+        --text-secondary: #000000;
+    }
 }

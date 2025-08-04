@@ -23,7 +23,7 @@
     </div>
 
     <!-- Header -->
-    <header class="header" style="position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; height: 70px !important; z-index: 999999 !important; background: rgba(255, 255, 255, 0.95) !important; transform: none !important;">
+    <header class="header">
         <nav class="nav-container">
             <div class="brand-container">
                 <a href="/" class="brand-link">
@@ -44,7 +44,8 @@
             </div>
             
             <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Mobil menüyü aç/kapat">
+                <span class="sr-only">Menüyü Aç/Kapat</span>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -71,16 +72,6 @@
                 <p class="hero-intro" data-translate="hero-intro">
                     4N Yapı olarak, konut, ticari ve sanayi yapılarında kaliteyi, mühendisliği ve estetiği bir araya getiriyoruz. Ankara merkezli firmamızla, güvenilir ve modern yaşam alanları inşa ediyor, geleceğe sağlam adımlar atıyoruz.
                 </p>
-                <div class="hero-cta">
-                    <a href="#projeler" class="btn btn-primary">
-                        <i class="fas fa-building"></i>
-                        <span data-translate="btn-view-projects">Projelerimizi İnceleyin</span>
-                    </a>
-                    <a href="#iletisim" class="btn btn-outline">
-                        <i class="fas fa-phone"></i>
-                        <span data-translate="btn-contact-us">İletişime Geçin</span>
-                    </a>
-                </div>
             </div>
         </section>
 
@@ -125,9 +116,11 @@
             </div>
         </section>
         
-        <!-- Featured Projects Grid - Full Width -->
-        <section class="featured-projects-section">
-            <div class="projects-grid">
+        <!-- Combined Projects Section - No visual separation -->
+        <section class="projects-unified-section">
+            <!-- Featured Projects Grid -->
+            <div class="featured-projects-section">
+                <div class="projects-grid">
                 <div class="project-card">
                     <img src="assets/images/projects/Atakule GYO Arjantin Caddesi Ofis Binası.jpg" alt="Atakule GYO Arjantin Caddesi Ofis Binası" class="project-image" loading="lazy">
                     <div class="project-info">
@@ -382,22 +375,16 @@
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Projeler Section Continued -->
-        <section id="projeler-continued" class="section">
-            <div class="container">
-                <div class="all-projects-header">
-                    <h3 class="subsection-title" data-translate="all-projects">TÜM PROJELERİMİZ</h3>
-                </div>
+            
+            <!-- All Projects Header and Grid - Same container -->
+            <div class="all-projects-header">
+                <h3 class="subsection-title" data-translate="all-projects">TÜM PROJELERİMİZ</h3>
             </div>
-        </section>
-        
-        <!-- All Projects Grid - Full Width -->
-        <section class="all-projects-section" id="allProjectsSection">
-            <div class="all-projects-grid" id="allProjectsGrid">
+            
+            <div class="all-projects-section" id="allProjectsSection">
+                <div class="all-projects-grid" id="allProjectsGrid">
                     <div class="project-item">
-                        <h4>Atakule GYO Farabi Ofis Binası</h4>
+                        <h4>Atakule GYO Arjantin Caddesi Ofis Binası</h4>
                         <p class="project-details">Arjantin Caddesi/ANKARA</p>
                     </div>
                     <div class="project-item">
@@ -804,6 +791,7 @@
                         <h4>Vadi İkizleri Sitesi (Gürler A.Ş Ortaklığıyla)</h4>
                         <p class="project-details">Çankaya/ANKARA</p>
                     </div>
+                </div>
             </div>
         </section>
 

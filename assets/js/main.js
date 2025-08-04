@@ -50,9 +50,7 @@ const translations = {
         "logo-alt": "Dörten Yapı Sanayi Logo",
         "meta-description": "Dörten Yapı - İnşaat, yapı ve müteahhitlik hizmetleri. Ankara'da profesyonel ve güvenilir yapı çözümleri.",
         "meta-keywords": "4n Yapı, Dörten Yapı, inşaat, müteahhit, yapı, Ankara, inşaat firması, müteahhitlik",
-        "loading-text": "Yükleniyor...",
-        "btn-view-projects": "Projelerimizi İnceleyin",
-        "btn-contact-us": "İletişime Geçin"
+        "loading-text": "Yükleniyor..."
     },
     en: {
         "hero-title": "PERFECT QUALITY<br>PERFECT TRUST",
@@ -105,9 +103,7 @@ const translations = {
         "logo-alt": "Dörten Yapı Sanayi Logo",
         "meta-description": "Dörten Yapı - Construction, building and contracting services. Professional and reliable building solutions in Ankara.",
         "meta-keywords": "4n Construction, Dörten Yapı, construction, contractor, building, Ankara, construction company, contracting",
-        "loading-text": "Loading...",
-        "btn-view-projects": "View Our Projects",
-        "btn-contact-us": "Contact Us"
+        "loading-text": "Loading..."
     }
 };
 
