@@ -228,26 +228,6 @@ function initializeSimpleEffects() {
         }
     });
     
-    // Enhanced gallery interactions with smooth transitions
-    const galleryImages = document.querySelectorAll('.gallery-slide img');
-    galleryImages.forEach(image => {
-        image.style.cursor = 'pointer';
-        image.addEventListener('click', (e) => {
-            e.stopPropagation();
-            
-            const gallery = image.closest('.project-gallery');
-            const activeSlide = gallery.querySelector('.gallery-slide.active');
-            const activeImage = activeSlide.querySelector('img');
-            
-            // Add click animation
-            activeImage.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                activeImage.style.transform = 'scale(1)';
-                window.open(activeImage.src, '_blank');
-            }, 150);
-        });
-    });
-    
     // Add click handlers for language buttons
     const langButtons = document.querySelectorAll('.lang-btn');
     langButtons.forEach(button => {
@@ -1222,52 +1202,6 @@ class ProgressIndicator {
             this.progressBar.style.width = scrolled + '%';
         }
     }
-}
-
-// Gallery functionality
-function changeSlide(button, direction) {
-    const gallery = button.closest('.project-gallery');
-    const slides = gallery.querySelectorAll('.gallery-slide');
-    const indicators = gallery.querySelectorAll('.indicator');
-    
-    // Find current active slide
-    let currentIndex = 0;
-    slides.forEach((slide, index) => {
-        if (slide.classList.contains('active')) {
-            currentIndex = index;
-        }
-    });
-    
-    // Remove active class from current slide and indicator
-    slides[currentIndex].classList.remove('active');
-    indicators[currentIndex].classList.remove('active');
-    
-    // Calculate new index
-    let newIndex = currentIndex + direction;
-    if (newIndex >= slides.length) {
-        newIndex = 0;
-    } else if (newIndex < 0) {
-        newIndex = slides.length - 1;
-    }
-    
-    // Add active class to new slide and indicator
-    slides[newIndex].classList.add('active');
-    indicators[newIndex].classList.add('active');
-}
-
-function currentSlide(indicator, slideNumber) {
-    const gallery = indicator.closest('.project-gallery');
-    const slides = gallery.querySelectorAll('.gallery-slide');
-    const indicators = gallery.querySelectorAll('.indicator');
-    
-    // Remove active class from all slides and indicators
-    slides.forEach(slide => slide.classList.remove('active'));
-    indicators.forEach(ind => ind.classList.remove('active'));
-    
-    // Add active class to selected slide and indicator
-    const newIndex = slideNumber - 1;
-    slides[newIndex].classList.add('active');
-    indicators[newIndex].classList.add('active');
 }
 
 // Mobile Projects Toggle Functionality - DISABLED
