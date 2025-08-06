@@ -23,30 +23,30 @@ const translations = {
         "industrial-projects": "Sanayi Projeleri",
         "public-projects": "Kamu Projeleri",
         "tourism-projects": "Turizm Projeleri",
-        "contact-intro": "4N Yapı ile projelerinizi güvenle hayata geçirmek için bizimle iletişime geçin. Ofisimiz Ankara'nın Çankaya ilçesinde yer almakta olup, telefon veya e-posta aracılığıyla bize kolayca ulaşabilirsiniz. Dilerseniz aşağıdaki form üzerinden de bize mesaj gönderebilirsiniz – en kısa sürede dönüş sağlanacaktır.",
+        "contact-intro": "4N Yapı ile projelerinizi güvenle hayata geçirmek için bizimle iletişime geçin. Ankara'nın Çankaya ilçesinde yer alan ofisimiz, telefon veya e-posta aracılığıyla kolayca ulaşabileceğiniz profesyonel bir hizmet noktasıdır. Projeleriniz ve sorularınız için en kısa sürede dönüş sağlamaktayız.",
+        "contact-info-title": "İletişim Bilgileri",
         "contact-address": "Adres",
         "contact-phone": "Telefon",
         "contact-email": "E-posta",
-        "form-name": "Adınız",
-        "form-email": "E-posta Adresiniz",
-        "form-phone": "Telefon Numaranız",
-        "form-message": "Mesajınız",
-        "form-submit": "Gönder",
-        "form-name-placeholder": "Adınız *",
-        "form-email-placeholder": "E-posta Adresiniz *",
-        "form-phone-placeholder": "Telefon Numaranız",
-        "form-message-placeholder": "Mesajınız *",
-        "contact-form-title": "İletişim Formu",
+        "contact-instagram": "Instagram",
         "map-title": "Ofis Konumumuz",
-        "form-sending": "Gönderiliyor...",
-        "form-success": "Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.",
-        "form-error": "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
-        "form-required": "Bu alan zorunludur",
-        "form-email-invalid": "Geçerli bir e-posta adresi giriniz",
-        "form-phone-invalid": "Geçerli bir telefon numarası giriniz",
-        "footer-description": "Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.<br>İnşaat ve yapı sektöründe kalite, güvenilirlik ve mühendislik mükemmelliği ile hizmet vermekteyiz.",
-        "footer-contact-title": "İletişim",
-        "footer-copyright": "&copy; 2025 Dörten Yapı Sanayi. Tüm hakları saklıdır.",
+        "footer-description": "İnşaat ve yapı sektöründe kalite, güvenilirlik ve mühendislik mükemmelliği ile hizmet veren Ankara merkezli firmamız, konut, ticari ve sanayi yapılarında profesyonel çözümler sunmaktadır.",
+        "footer-registration": "Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.",
+        "footer-quick-links": "Hızlı Bağlantılar",
+        "footer-nav-kurumsal": "Kurumsal",
+        "footer-nav-projeler": "Projelerimiz",
+        "footer-nav-iletisim": "İletişim",
+        "footer-services-title": "Hizmetlerimiz",
+        "footer-service-residential": "Konut Projeleri",
+        "footer-service-commercial": "Ticari Yapılar",
+        "footer-service-industrial": "Sanayi Tesisleri",
+        "footer-service-infrastructure": "Altyapı Çözümleri",
+        "footer-contact-title": "İletişim Bilgileri",
+        "footer-address": "Büklüm Sk. No: 66/2<br>Kavaklıdere, Çankaya/ANKARA",
+        "footer-quality-title": "Kalite & Güven",
+        "footer-quality-1": "Profesyonel Hizmet",
+        "footer-quality-2": "Güvenilir Partner",
+        "footer-quality-3": "Uzman Ekip",
         "logo-alt": "Dörten Yapı Sanayi Logo",
         "meta-description": "Dörten Yapı - İnşaat, yapı ve müteahhitlik hizmetleri. Ankara'da profesyonel ve güvenilir yapı çözümleri.",
         "meta-keywords": "4n Yapı, Dörten Yapı, inşaat, müteahhit, yapı, Ankara, inşaat firması, müteahhitlik",
@@ -76,30 +76,32 @@ const translations = {
         "industrial-projects": "Industrial Projects",
         "public-projects": "Public Projects",
         "tourism-projects": "Tourism Projects",
-        "contact-intro": "Contact us to safely bring your projects to life with 4N Yapı. Our office is located in Çankaya district of Ankara, and you can easily reach us by phone or email. If you wish, you can also send us a message through the form below – we will respond as soon as possible.",
+        "contact-intro": "Contact us to safely bring your projects to life with 4N Yapı. Our office in Çankaya district of Ankara is a professional service point that you can easily reach by phone or email. We provide quick response for your projects and questions.",
+        "contact-info-title": "Contact Information",
         "contact-address": "Address",
         "contact-phone": "Phone",
         "contact-email": "Email",
-        "form-name": "Your Name",
-        "form-email": "Your Email",
-        "form-phone": "Your Phone Number",
-        "form-message": "Your Message",
-        "form-submit": "Send",
-        "form-name-placeholder": "Your Name *",
-        "form-email-placeholder": "Your Email Address *",
-        "form-phone-placeholder": "Your Phone Number",
-        "form-message-placeholder": "Your Message *",
-        "contact-form-title": "Contact Form",
+        "contact-instagram": "Instagram",
         "map-title": "Office Location",
-        "form-sending": "Sending...",
-        "form-success": "Your message has been sent successfully! We will get back to you as soon as possible.",
-        "form-error": "An error occurred while sending the message. Please try again.",
-        "form-required": "This field is required",
-        "form-email-invalid": "Please enter a valid email address",
-        "form-phone-invalid": "Please enter a valid phone number",
-        "footer-description": "Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.<br>We serve in the construction and building sector with quality, reliability and engineering excellence.",
-        "footer-contact-title": "Contact",
-        "footer-copyright": "&copy; 2025 Dörten Yapı Sanayi. All rights reserved.",
+        "footer-description": "Our Ankara-based company serves in the construction and building sector with quality, reliability and engineering excellence, providing professional solutions in residential, commercial and industrial structures.",
+        "footer-registration": "Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.",
+        "footer-quick-links": "Quick Links",
+        "footer-nav-kurumsal": "Corporate",
+        "footer-nav-projeler": "Our Projects",
+        "footer-nav-iletisim": "Contact",
+        "footer-services-title": "Our Services",
+        "footer-service-residential": "Residential Projects",
+        "footer-service-commercial": "Commercial Buildings",
+        "footer-service-industrial": "Industrial Facilities",
+        "footer-service-infrastructure": "Infrastructure Solutions",
+        "footer-contact-title": "Contact Information",
+        "footer-address": "Büklüm St. No: 66/2<br>Kavaklıdere, Çankaya/ANKARA",
+        "footer-social-title": "Follow Us",
+        "footer-quality-title": "Quality & Trust",
+        "footer-quality-1": "Professional Service",
+        "footer-quality-2": "Reliable Partner",
+        "footer-quality-3": "Expert Team",
+        "footer-copyright": "&copy; 2025 Dörten Yapı - All rights reserved.",
         "logo-alt": "Dörten Yapı Sanayi Logo",
         "meta-description": "Dörten Yapı - Construction, building and contracting services. Professional and reliable building solutions in Ankara.",
         "meta-keywords": "4n Construction, Dörten Yapı, construction, contractor, building, Ankara, construction company, contracting",
@@ -224,6 +226,54 @@ function initializeSimpleEffects() {
         }
     });
     
+    // Enhanced Contact Card Interactions - Make entire cards clickable
+    const contactCards = document.querySelectorAll('.contact-card');
+    contactCards.forEach(card => {
+        card.style.cursor = 'pointer';
+        
+        // Add hover effect
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-2px)';
+            card.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.15)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.boxShadow = '';
+        });
+        
+        // Make entire card clickable based on the link inside
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Find the primary link in the card
+            const link = card.querySelector('a');
+            if (link) {
+                // Add click animation
+                card.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    card.style.transform = 'translateY(-2px)';
+                    
+                    // Handle different types of links
+                    const href = link.getAttribute('href');
+                    if (href.startsWith('tel:')) {
+                        // For phone numbers, try to initiate call
+                        window.location.href = href;
+                    } else if (href.startsWith('mailto:')) {
+                        // For email, open email client
+                        window.location.href = href;
+                    } else if (href.startsWith('http')) {
+                        // For external links, open in new tab
+                        window.open(href, '_blank', 'noopener,noreferrer');
+                    } else {
+                        // For other links (like maps), open in new tab
+                        window.open(href, '_blank', 'noopener,noreferrer');
+                    }
+                }, 100);
+            }
+        });
+    });
+    
     // Add click handlers for language buttons
     const langButtons = document.querySelectorAll('.lang-btn');
     langButtons.forEach(button => {
@@ -238,340 +288,6 @@ function initializeSimpleEffects() {
 function handleScroll() {
     // Update progress bar only
     updateScrollProgress();
-}
-
-// Enhanced Form Validation and Submission
-function initializeContactForm() {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
-
-    const inputs = form.querySelectorAll('input, textarea');
-    
-    // Add real-time validation
-    inputs.forEach(input => {
-        input.addEventListener('blur', validateField);
-        input.addEventListener('input', clearErrors);
-    });
-
-    function validateField(e) {
-        const field = e.target;
-        const value = field.value.trim();
-        
-        // Remove existing error messages
-        clearFieldError(field);
-        
-        // Validation rules
-        const currentLang = localStorage.getItem('preferredLanguage') || 'tr';
-        
-        if (field.hasAttribute('required') && !value) {
-            showFieldError(field, translations[currentLang]['form-required']);
-            return false;
-        }
-        
-        if (field.type === 'email' && value && !isValidEmail(value)) {
-            showFieldError(field, translations[currentLang]['form-email-invalid']);
-            return false;
-        }
-        
-        if (field.type === 'tel' && value && !isValidPhone(value)) {
-            showFieldError(field, translations[currentLang]['form-phone-invalid']);
-            return false;
-        }
-        
-        return true;
-    }
-
-    function clearErrors(e) {
-        clearFieldError(e.target);
-    }
-
-    function showFieldError(field, message) {
-        field.classList.add('error');
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'field-error';
-        errorDiv.textContent = message;
-        errorDiv.style.color = '#dc2626';
-        errorDiv.style.fontSize = '0.875rem';
-        errorDiv.style.marginTop = '0.25rem';
-        field.parentNode.appendChild(errorDiv);
-    }
-
-    function clearFieldError(field) {
-        field.classList.remove('error');
-        const errorDiv = field.parentNode.querySelector('.field-error');
-        if (errorDiv) {
-            errorDiv.remove();
-        }
-    }
-
-    function isValidEmail(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-
-    function isValidPhone(phone) {
-        return /^[\+]?[0-9\s\-\(\)]{10,}$/.test(phone);
-    }
-
-    // Form submission with loading state
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Validate all fields
-        let isValid = true;
-        inputs.forEach(input => {
-            if (!validateField({ target: input })) {
-                isValid = false;
-            }
-        });
-
-        if (!isValid) return;
-
-        const submitBtn = form.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
-        const currentLang = localStorage.getItem('preferredLanguage') || 'tr';
-        
-        // Show loading state
-        submitBtn.disabled = true;
-        submitBtn.textContent = translations[currentLang]['form-sending'];
-        submitBtn.style.opacity = '0.7';
-
-        try {
-            // Simulate form submission (replace with actual endpoint)
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            
-            // Success state
-            submitBtn.textContent = translations[currentLang]['form-success'];
-            submitBtn.style.background = '#10b981';
-            
-            // Reset form after success
-            setTimeout(() => {
-                form.reset();
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-                submitBtn.style.opacity = '1';
-                submitBtn.style.background = '';
-            }, 3000);
-            
-        } catch (error) {
-            // Error state
-            submitBtn.textContent = translations[currentLang]['form-error'];
-            submitBtn.style.background = '#dc2626';
-            
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-                submitBtn.style.opacity = '1';
-                submitBtn.style.background = '';
-            }, 3000);
-        }
-    });
-}
-
-// Simple Contact Form Handler
-class SimpleContactForm {
-    constructor() {
-        this.form = document.getElementById('contactForm');
-        this.submitBtn = null;
-        
-        if (this.form) {
-            this.submitBtn = this.form.querySelector('.submit-btn');
-            this.init();
-        }
-    }
-    
-    init() {
-        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-        
-        // Add real-time validation
-        const inputs = this.form.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('blur', (e) => this.validateField(e.target));
-            input.addEventListener('input', (e) => this.clearFieldError(e.target));
-        });
-    }
-    
-    getCurrentLanguage() {
-        const activeBtn = document.querySelector('.lang-btn.active');
-        return activeBtn ? activeBtn.dataset.lang : 'tr';
-    }
-    
-    getTranslation(key) {
-        const lang = this.getCurrentLanguage();
-        return translations[lang] && translations[lang][key] ? translations[lang][key] : key;
-    }
-    
-    validateField(field) {
-        const value = field.value.trim();
-        
-        // Clear previous errors
-        this.clearFieldError(field);
-        
-        // Required field validation
-        if (field.hasAttribute('required') && !value) {
-            this.showFieldError(field, this.getTranslation('form-required'));
-            return false;
-        }
-        
-        // Email validation
-        if (field.type === 'email' && value && !this.isValidEmail(value)) {
-            this.showFieldError(field, this.getTranslation('form-email-invalid'));
-            return false;
-        }
-        
-        // Phone validation
-        if (field.type === 'tel' && value && !this.isValidPhone(value)) {
-            this.showFieldError(field, this.getTranslation('form-phone-invalid'));
-            return false;
-        }
-        
-        return true;
-    }
-    
-    showFieldError(field, message) {
-        field.classList.add('error');
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'field-error';
-        errorDiv.textContent = message;
-        errorDiv.style.cssText = `
-            color: #dc2626;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-            display: block;
-        `;
-        field.parentNode.insertBefore(errorDiv, field.nextSibling);
-    }
-    
-    clearFieldError(field) {
-        field.classList.remove('error');
-        const errorDiv = field.parentNode.querySelector('.field-error');
-        if (errorDiv) {
-            errorDiv.remove();
-        }
-    }
-    
-    async handleSubmit(e) {
-        e.preventDefault();
-        
-        if (!this.validateForm()) {
-            return;
-        }
-        
-        this.setLoading(true);
-        
-        try {
-            // Get form data
-            const formData = new FormData(this.form);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                message: formData.get('message')
-            };
-            
-            // Simulate form submission - replace with actual endpoint
-            await this.submitForm(data);
-            
-            this.showMessage(this.getTranslation('form-success'), 'success');
-            this.form.reset();
-            
-        } catch (error) {
-            this.showMessage(this.getTranslation('form-error'), 'error');
-        } finally {
-            this.setLoading(false);
-        }
-    }
-    
-    async submitForm(data) {
-        // Simulate API call - replace with your actual form submission endpoint
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                // Simulate success/failure
-                if (Math.random() > 0.1) { // 90% success rate for demo
-                    resolve({ success: true });
-                } else {
-                    reject(new Error('Submission failed'));
-                }
-            }, 2000);
-        });
-    }
-    
-    validateForm() {
-        const inputs = this.form.querySelectorAll('input[required], textarea[required]');
-        let isValid = true;
-        
-        inputs.forEach(input => {
-            if (!this.validateField(input)) {
-                isValid = false;
-            }
-        });
-        
-        return isValid;
-    }
-    
-    isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-    
-    isValidPhone(phone) {
-        const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
-        return phoneRegex.test(phone);
-    }
-    
-    setLoading(isLoading) {
-        if (!this.submitBtn) return;
-        
-        const btnText = this.submitBtn.querySelector('span');
-        const btnIcon = this.submitBtn.querySelector('i');
-        
-        if (isLoading) {
-            this.submitBtn.disabled = true;
-            this.submitBtn.style.opacity = '0.7';
-            if (btnIcon) btnIcon.className = 'fas fa-spinner fa-spin';
-            if (btnText) btnText.textContent = this.getTranslation('form-sending');
-        } else {
-            this.submitBtn.disabled = false;
-            this.submitBtn.style.opacity = '1';
-            if (btnIcon) btnIcon.className = 'fas fa-paper-plane';
-            if (btnText) btnText.textContent = this.getTranslation('form-submit');
-        }
-    }
-    
-    showMessage(message, type) {
-        // Remove existing message
-        const existingMessage = this.form.querySelector('.form-message');
-        if (existingMessage) {
-            existingMessage.remove();
-        }
-        
-        // Create new message
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `form-message form-message-${type}`;
-        messageDiv.textContent = message;
-        
-        // Add styles
-        messageDiv.style.cssText = `
-            padding: 12px 16px;
-            margin-top: 16px;
-            border-radius: 8px;
-            font-size: 14px;
-            text-align: center;
-            font-weight: 500;
-            ${type === 'success' ? 
-                'background: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd;' : 
-                'background: #fef2f2; color: #dc2626; border: 1px solid #fecaca;'
-            }
-        `;
-        
-        this.form.appendChild(messageDiv);
-        
-        // Remove message after 5 seconds
-        setTimeout(() => {
-            if (messageDiv.parentNode) {
-                messageDiv.remove();
-            }
-        }, 5000);
-    }
 }
 
 // Enhanced Statistics Counter Animation
@@ -732,9 +448,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize progress indicator
     const progressIndicator = new ProgressIndicator();
-    
-    // Initialize simple contact form
-    new SimpleContactForm();
     
     // Add scroll listener
     window.addEventListener('scroll', handleScroll);

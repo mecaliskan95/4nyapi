@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dörten Yapı</title>
+    <title>Dörten Yapı - İnşaat ve Yapı Sektöründe Kalite ve Güvenilirlik</title>
+    <meta name="description" content="Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti. - Ankara merkezli inşaat firması. Konut, ticari ve sanayi yapılarında kaliteli hizmet. Güvenilir ve profesyonel çözümler.">
+    <meta name="keywords" content="dörten yapı, 4n yapı, ankara inşaat, yapı, konut, ticari yapı, sanayi yapı, inşaat firması, ankara">
+    <meta name="author" content="Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dörten Yapı - İnşaat ve Yapı Sektöründe Kalite ve Güvenilirlik">
+    <meta property="og:description" content="Ankara merkezli inşaat firması. Konut, ticari ve sanayi yapılarında kaliteli hizmet. Güvenilir ve profesyonel çözümler.">
+    <meta property="og:image" content="assets/images/4nyapi_logo.png">
+    <meta property="og:url" content="https://4nyapi.com">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Dörten Yapı - İnşaat ve Yapı Sektöründe Kalite ve Güvenilirlik">
+    <meta property="twitter:description" content="Ankara merkezli inşaat firması. Konut, ticari ve sanayi yapılarında kaliteli hizmet.">
+    <meta property="twitter:image" content="assets/images/4nyapi_logo.png">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/4nyapi_logo.png">
+    <link rel="apple-touch-icon" href="assets/images/4nyapi_logo.png">
     
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" aria-label="Ana içeriğe geç">Ana içeriğe geç</a>
+    
     <!-- Loading Overlay -->
     <div class="loading">
         <div class="loading-spinner"></div>
         <div class="loading-text" data-translate="loading-text">Yükleniyor...</div>
     </div>
 
-    <!-- Header -->
+    <!-- Hea                <h2 class="section-title" data-translate="section-iletisim">İLETİŞİM</h2>
+                <p class="contact-intro" data-translate="contact-intro">4N Yapı ile projelerinizi güvenle hayata geçirmek için bizimle iletişime geçin. Ankara'nın Çankaya ilçesinde yer alan ofisimiz, telefon veya e-posta aracılığıyla kolayca ulaşabileceğiniz profesyonel bir hizmet noktasıdır. Projeleriniz ve sorularınız için en kısa sürede dönüş sağlamaktayız.</p>r -->
     <header class="header">
         <nav class="nav-container">
             <div class="brand-container">
@@ -64,9 +88,9 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content" role="main">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" role="banner" aria-label="Ana sayfa hero bölümü">
             <div class="hero-content">
                 <h1 data-translate="hero-title">DÖRT DÖRTLÜK KALİTE<br>DÖRT DÖRTLÜK GÜVEN</h1>
                 <p class="hero-intro" data-translate="hero-intro">
@@ -76,9 +100,9 @@
         </section>
 
         <!-- Kurumsal Section -->
-        <section id="kurumsal" class="section">
+        <section id="kurumsal" class="section" role="main" aria-labelledby="kurumsal-title">
             <div class="container">
-                <h2 class="section-title" data-translate="section-kurumsal">KURUMSAL</h2>
+                <h2 id="kurumsal-title" class="section-title" data-translate="section-kurumsal">KURUMSAL</h2>
                 
                 <!-- Company Description - Full Width -->
                 <div class="company-description">
@@ -106,9 +130,9 @@
         </section>
 
         <!-- Projeler Section -->
-        <section id="projeler" class="section">
+        <section id="projeler" class="section" role="main" aria-labelledby="projeler-title">
             <div class="container">
-                <h2 class="section-title" data-translate="section-projeler">PROJELERİMİZ</h2>
+                <h2 id="projeler-title" class="section-title" data-translate="section-projeler">PROJELERİMİZ</h2>
                 <p class="projects-intro" data-translate="projects-intro">4N Yapı, kuruluşundan bu yana birçok başarılı projeye imza atmıştır. Konut, iş merkezi ve endüstriyel yapı kategorilerinde uzmanlaşmış ekibimizle; işlevsel, estetik ve yönetmeliklere tam uyumlu yapılar tasarlayıp hayata geçiriyoruz. Referans projelerimiz, mühendislik hassasiyeti ve kullanıcı memnuniyetini bir arada sunan profesyonel çözümlerimizle şekillenmektedir.</p>
                 
                 <!-- Featured Projects with Images -->
@@ -122,16 +146,16 @@
             <div class="featured-projects-section">
                 <div class="projects-grid">
                 <div class="project-card">
-                    <img src="assets/images/projects/Atakule GYO Arjantin Caddesi Ofis Binası.jpg" alt="Atakule GYO Arjantin Caddesi Ofis Binası" class="project-image" loading="lazy">
+                    <img src="assets/images/projects/Atakule GYO Arjantin Caddesi Ofis Binası.jpg" alt="Atakule GYO Ofis Binası" class="project-image" loading="lazy">
                     <div class="project-info">
-                        <h3 class="project-title">Atakule GYO Arjantin Caddesi Ofis Binası</h3>
+                        <h3 class="project-title">Atakule GYO Ofis Binası</h3>
                         <p class="project-location">Arjantin Caddesi, Çankaya/ANKARA</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/projects/Atakule GYO Farabi Ofis Binası.jpg" alt="Atakule GYO Farabi Ofis Binası" class="project-image" loading="lazy">
+                    <img src="assets/images/projects/Atakule GYO Farabi Ofis Binası.jpg" alt="Atakule GYO Ofis Binası" class="project-image" loading="lazy">
                     <div class="project-info">
-                        <h3 class="project-title">Atakule GYO Farabi Ofis Binası</h3>
+                        <h3 class="project-title">Atakule GYO Ofis Binası</h3>
                         <p class="project-location">Farabi Sokak, Çankaya/ANKARA</p>
                     </div>
                 </div>
@@ -150,7 +174,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/projects/Beytepe Manzara Orman Evleri.jpeg" alt="Beytepe Manzara Orman Evleri" class="project-image" loading="lazy">
+                    <img src="assets/images/projects/Beytepe Manzara Orman Evleri 2.jpeg" alt="Beytepe Manzara Orman Evleri" class="project-image" loading="lazy">
                     <div class="project-info">
                         <h3 class="project-title">Beytepe Manzara Orman Evleri</h3>
                         <p class="project-location">Beytepe/ANKARA</p>
@@ -178,7 +202,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/projects/Hollanda Caddesi Ofis Binası.jpg" alt="Hollanda Caddesi Ofis Binası" class="project-image" loading="lazy">
+                    <img src="assets/images/projects/Ofis Binası_2.png" alt="Hollanda Caddesi Ofis Binası" class="project-image" loading="lazy">
                     <div class="project-info">
                         <h3 class="project-title">Ofis Binası</h3>
                         <p class="project-location">Hollanda Caddesi/ANKARA</p>
@@ -227,7 +251,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/projects/Otto Hotel Tunalı.jpeg" alt="Otto Otel" class="project-image" loading="lazy">
+                    <img src="assets/images/projects/Otto Otel.jpg" alt="Otto Otel" class="project-image" loading="lazy">
                     <div class="project-info">
                         <h3 class="project-title">Otto Otel</h3>
                         <p class="project-location">Büklüm Sokak/ANKARA</p>
@@ -298,9 +322,9 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/projects/İlkbahar Mahallesi Sargın İnşaat.jpg" alt="SARGIN İnşaat ve Makine Sanayi Ticaret A.Ş." class="project-image" loading="lazy">
+                    <img src="assets/images/projects/İlkbahar Mahallesi Sargın İnşaat.jpg" alt="Ofis Binası" class="project-image" loading="lazy">
                     <div class="project-info">
-                        <h3 class="project-title">SARGIN İnşaat ve Makine Sanayi Ticaret A.Ş.</h3>
+                        <h3 class="project-title">Ofis Binası</h3>
                         <p class="project-location">İlkbahar Mahallesi/ANKARA</p>
                     </div>
                 </div>
@@ -309,6 +333,13 @@
                     <div class="project-info">
                         <h3 class="project-title">Özel Villa</h3>
                         <p class="project-location">İncek, Kızılcaşar/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/İşyeri - Ahmet Mithat Efendi Sk..jpg" alt="Şirket Merkezi" class="project-image" loading="lazy">
+                    <div class="project-info">
+                        <h3 class="project-title">Şirket Merkezi</h3>
+                        <p class="project-location">Güzeltepe, Ahmet Mithat Efendi Sk., Çankaya/ANKARA</p>
                     </div>
                 </div>
                 <div class="project-card">
@@ -368,9 +399,9 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/projects/Atatürk Meydanı.jpeg" alt="Atatürk Meydanı" class="project-image" loading="lazy">
+                    <img src="assets/images/projects/Ata Meydanı.jpeg" alt="Ata Meydanı" class="project-image" loading="lazy">
                     <div class="project-info">
-                        <h3 class="project-title">Atatürk Meydanı</h3>
+                        <h3 class="project-title">Ata Meydanı</h3>
                         <p class="project-location">Çankaya/ANKARA</p>
                     </div>
                 </div>
@@ -403,10 +434,17 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/projects/Les Mikrogen Hastanesi.png" alt="Les Mikrogen Hastanesi" class="project-image" loading="lazy">
+                    <img src="assets/images/projects/Les Mikrogen Hastanesi.jpg" alt="Les Mikrogen Hastanesi" class="project-image" loading="lazy">
                     <div class="project-info">
                         <h3 class="project-title">Les Mikrogen Hastanesi</h3>
                         <p class="project-location">100. Yıl, Reşit Galip Cd., Çankaya/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/YMMO Binası.jpg" alt="Yeminli Mali Müşavirler Binası Genel Merkezi" class="project-image" loading="lazy">
+                    <div class="project-info">
+                        <h3 class="project-title">Yeminli Mali Müşavirler Binası Genel Merkezi</h3>
+                        <p class="project-location">Beyaz Zambaklar Sk. (Kader Sk.), Gaziosmanpaşa, Çankaya/ANKARA</p>
                     </div>
                 </div>
             </div>
@@ -443,7 +481,7 @@
                         <p class="project-details">Beyaz Zambaklar Sokağı/ANKARA</p>
                     </div>
                     <div class="project-item">
-                        <h4>YMMO Genel Merkezi</h4>
+                        <h4>Yeminli Mali Müşavirler Odası Genel Merkezi</h4>
                         <p class="project-details">Kızılay/ANKARA</p>
                     </div>
                     <div class="project-item">
@@ -671,6 +709,10 @@
                         <p class="project-details">Gaziosmanpaşa/ANKARA</p>
                     </div>
                     <div class="project-item">
+                        <h4>Behçet Süleymanoğlu Villası</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
                         <h4>Hikmet Karadeniz Villası</h4>
                         <p class="project-details">İncek/ANKARA</p>
                     </div>
@@ -831,73 +873,67 @@
         </section>
 
         <!-- İletişim Section -->
-        <section id="iletisim" class="section contact-section">
+        <section id="iletisim" class="section contact-section" role="main" aria-labelledby="iletisim-title">
             <div class="container">
-                <h2 class="section-title" data-translate="section-iletisim">İLETİŞİM</h2>
+                <h2 id="iletisim-title" class="section-title" data-translate="section-iletisim">İLETİŞİM</h2>
                 <p class="contact-intro" data-translate="contact-intro">4N Yapı ile projelerinizi güvenle hayata geçirmek için bizimle iletişime geçin. Ofisimiz Ankara’nın Çankaya ilçesinde yer almakta olup, telefon veya e-posta aracılığıyla bize kolayca ulaşabilirsiniz. Dilerseniz aşağıdaki form üzerinden de bize mesaj gönderebilirsiniz – en kısa sürede dönüş sağlanacaktır.</p>
                 
-                <!-- Contact Items Grid -->
-                <div class="contact-items-grid">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Adres</h4>
-                            <span>Büklüm Sk. No: 66/2, Kavaklıdere, Çankaya/ANKARA</span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Telefon</h4>
-                            <span>+90 (312) 426 07 78</span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>E-posta</h4>
-                            <a href="mailto:info@4nyapi.com">info@4nyapi.com</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form and Map Grid -->
-                <div class="contact-content-grid">
-                    <!-- Simplified Contact Form -->
-                    <div class="contact-form-container">
-                        <h3 class="subsection-title" data-translate="contact-form-title">İletişim Formu</h3>
-                        <form id="contactForm" class="contact-form">
-                            <div class="contact-form-fields">
-                                <label for="name" class="sr-only" data-translate="form-name">Adınız</label>
-                                <input type="text" id="name" name="name" data-translate-placeholder="form-name-placeholder" placeholder="Adınız *" required>
-                                <label for="email" class="sr-only" data-translate="form-email">E-posta Adresiniz</label>
-                                <input type="email" id="email" name="email" data-translate-placeholder="form-email-placeholder" placeholder="E-posta Adresiniz *" required>
-                                <label for="phone" class="sr-only" data-translate="form-phone">Telefon Numaranız</label>
-                                <input type="tel" id="phone" name="phone" data-translate-placeholder="form-phone-placeholder" placeholder="Telefon Numaranız">
-                                <label for="message" class="sr-only" data-translate="form-message">Mesajınız</label>
-                                <textarea id="message" name="message" data-translate-placeholder="form-message-placeholder" placeholder="Mesajınız *" rows="4" required></textarea>
+                <!-- Contact Content Grid -->
+                <div class="contact-content-wrapper">
+                    <!-- Contact Information Cards -->
+                    <div class="contact-info-section">
+                        <h3 class="subsection-title" data-translate="contact-info-title">İletişim Bilgileri</h3>
+                        <div class="contact-cards-grid">
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-card-content">
+                                    <h4 data-translate="contact-address">Adres</h4>
+                                    <span><a href="https://maps.google.com/maps?q=Büklüm+Sk.+No:+66/2,+Kavaklıdere,+Çankaya/ANKARA" target="_blank" rel="noopener noreferrer">Büklüm Sk. No: 66/2<br>Kavaklıdere, Çankaya/ANKARA</a></span>
+                                </div>
                             </div>
-                            <button type="submit" class="btn submit-btn">
-                                <i class="fas fa-paper-plane"></i>
-                                <span data-translate="form-submit">Gönder</span>
-                            </button>
-                        </form>
+                            
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-card-content">
+                                    <h4 data-translate="contact-phone">Telefon</h4>
+                                    <span>+90 (312) 426 07 78</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-card-content">
+                                    <h4 data-translate="contact-email">E-posta</h4>
+                                    <a href="mailto:info@4nyapi.com">info@4nyapi.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="contact-card-content">
+                                    <h4 data-translate="contact-instagram">Instagram</h4>
+                                    <a href="https://www.instagram.com/4nyapi/" target="_blank" rel="noopener noreferrer">@4nyapi</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Google Maps -->
-                    <div class="map-container">
+
+                    <!-- Map Section -->
+                    <div class="map-section">
                         <h3 class="subsection-title" data-translate="map-title">Ofis Konumumuz</h3>
-                        <div class="map-wrapper">
+                        <div class="map-container">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.560112809596!2d32.8608846122467!3d39.90647997140736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fa4c23558c9%3A0x18cf0ce4bc0cf152!2zQmFyYmFyb3MsIELDvGtsw7xtIENkIE5vOjY2LCAwNjY4MCDDh2Fua2F5YS9BbmthcmE!5e0!3m2!1str!2str!4v1750186649385!5m2!1str!2str"
                                 width="100%"
-                                height="350"
+                                height="100%"
                                 class="contact-map"
                                 allowfullscreen=""
                                 loading="lazy"
@@ -914,28 +950,103 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <!-- Column 1: Company info -->
                 <div class="footer-info">
                     <img src="assets/images/4nyapi_logo.png" alt="Dörten Yapı Logo" class="footer-logo" data-translate="logo-alt">
+                    <h3 class="footer-company-name">Dörten Yapı</h3>
                     <p class="footer-text" data-translate="footer-description">
-                        Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.<br>
-                        İnşaat ve yapı sektöründe kalite, güvenilirlik ve mühendislik mükemmelliği ile hizmet vermekteyiz.
+                        İnşaat ve yapı sektöründe kalite, güvenilirlik ve mühendislik mükemmelliği ile hizmet veren Ankara merkezli firmamız, konut, ticari ve sanayi yapılarında profesyonel çözümler sunmaktadır.
                     </p>
                 </div>
+
+                <!-- Column 2: Navigation Links -->
+                <div class="footer-links">
+                    <h4 data-translate="footer-quick-links">Hızlı Bağlantılar</h4>
+                    <ul class="footer-nav-links">
+                        <li>
+                            <i class="fas fa-building"></i>
+                            <a href="#kurumsal" data-translate="footer-nav-kurumsal">Kurumsal</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-project-diagram"></i>
+                            <a href="#projeler" data-translate="footer-nav-projeler">Projelerimiz</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="#iletisim" data-translate="footer-nav-iletisim">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact information -->
                 <div class="footer-contact">
-                    <h4 data-translate="footer-contact-title">İletişim</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Büklüm Sk. No: 66/2, Kavaklıdere, Çankaya/ANKARA</p>
-                    <p><i class="fas fa-phone"></i> +90 (312) 426 07 78</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@4nyapi.com">info@4nyapi.com</a></p>
+                    <h4 data-translate="footer-contact-title">İletişim Bilgileri</h4>
+                    <ul class="footer-contact-links">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://maps.google.com/maps?q=Büklüm+Sk.+No:+66/2,+Kavaklıdere,+Çankaya/ANKARA" target="_blank" rel="noopener noreferrer" data-translate="footer-address">
+                                Büklüm Sk. No: 66/2, Kavaklıdere, Çankaya/ANKARA
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+90 (312) 426 07 78</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@4nyapi.com">info@4nyapi.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/4nyapi/" target="_blank" rel="noopener noreferrer">@4nyapi</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p data-translate="footer-copyright">&copy; Dörten Yapı 2025</p>
+                <div class="footer-bottom-content">
+                    <p class="copyright" data-translate="footer-copyright">&copy; 2025 Dörten Yapı - Tüm hakları saklıdır.</p>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dörten Yapı Sanayi Turizm Ticaret Ltd. Şti.",
+        "alternateName": "4N Yapı",
+        "url": "https://4nyapi.com",
+        "logo": "https://4nyapi.com/assets/images/4nyapi_logo.png",
+        "description": "İnşaat ve yapı sektöründe kalite, güvenilirlik ve mühendislik mükemmelliği ile hizmet veren Ankara merkezli firma.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Büklüm Sk. No: 66/2",
+            "addressLocality": "Kavaklıdere, Çankaya",
+            "addressRegion": "Ankara",
+            "addressCountry": "TR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+90-312-426-07-78",
+            "contactType": "Customer Service",
+            "email": "info@4nyapi.com"
+        },
+        "sameAs": [
+            "https://www.instagram.com/4nyapi/"
+        ],
+        "serviceArea": {
+            "@type": "Place",
+            "name": "Ankara, Türkiye"
+        }
+    }
+    </script>
     
     <!-- Force header to stay fixed -->
     <script>
