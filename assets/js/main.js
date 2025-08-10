@@ -102,6 +102,7 @@ const translations = {
         "footer-quality-2": "Reliable Partner",
         "footer-quality-3": "Expert Team",
         "footer-copyright": "&copy; 2025 Dörten Yapı - All rights reserved.",
+        "footer-designer": "Design: Mert Çalışkan",
         "logo-alt": "Dörten Yapı Sanayi Logo",
         "meta-description": "Dörten Yapı - Construction, building and contracting services. Professional and reliable building solutions in Ankara.",
         "meta-keywords": "4n Construction, Dörten Yapı, construction, contractor, building, Ankara, construction company, contracting",

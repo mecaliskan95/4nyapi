@@ -33,6 +33,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Preload critical images for faster loading -->
+    <link rel="preload" href="assets/images/4nyapi_logo.png" as="image">
+    <link rel="preload" href="assets/images/projects/Atakule GYO Arjantin Caddesi Ofis Binası.jpg" as="image">
+    <link rel="preload" href="assets/images/projects/Atakule GYO Farabi Ofis Binası.jpg" as="image">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
@@ -45,13 +50,12 @@
         <div class="loading-text" data-translate="loading-text">Yükleniyor...</div>
     </div>
 
-    <!-- Hea                <h2 class="section-title" data-translate="section-iletisim">İLETİŞİM</h2>
-                <p class="contact-intro" data-translate="contact-intro">4N Yapı ile projelerinizi güvenle hayata geçirmek için bizimle iletişime geçin. Ankara'nın Çankaya ilçesinde yer alan ofisimiz, telefon veya e-posta aracılığıyla kolayca ulaşabileceğiniz profesyonel bir hizmet noktasıdır. Projeleriniz ve sorularınız için en kısa sürede dönüş sağlamaktayız.</p>r -->
+    <!-- Header and Navigation -->
     <header class="header">
         <nav class="nav-container">
             <div class="brand-container">
                 <a href="/" class="brand-link">
-                    <img src="assets/images/4nyapi_logo.png" alt="Dörten Yapı Logo" class="logo">
+                    <img src="assets/images/4nyapi_logo.png" alt="Dörten Yapı Logo" class="logo" loading="eager">
                     <span class="company-name">Dörten Yapı</span>
                 </a>
             </div>
@@ -146,14 +150,14 @@
             <div class="featured-projects-section">
                 <div class="projects-grid">
                 <div class="project-card">
-                    <img src="assets/images/projects/Atakule GYO Arjantin Caddesi Ofis Binası.jpg" alt="Atakule GYO Ofis Binası" class="project-image" loading="lazy">
+                    <img src="assets/images/projects/Atakule GYO Arjantin Caddesi Ofis Binası.jpg" alt="Atakule GYO Ofis Binası" class="project-image" loading="eager">
                     <div class="project-info">
                         <h3 class="project-title">Atakule GYO Ofis Binası</h3>
                         <p class="project-location">Arjantin Caddesi, Çankaya/ANKARA</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/projects/Atakule GYO Farabi Ofis Binası.jpg" alt="Atakule GYO Ofis Binası" class="project-image" loading="lazy">
+                    <img src="assets/images/projects/Atakule GYO Farabi Ofis Binası.jpg" alt="Atakule GYO Ofis Binası" class="project-image" loading="eager">
                     <div class="project-info">
                         <h3 class="project-title">Atakule GYO Ofis Binası</h3>
                         <p class="project-location">Farabi Sokak, Çankaya/ANKARA</p>
@@ -1007,6 +1011,7 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <p class="copyright" data-translate="footer-copyright">&copy; 2025 Dörten Yapı - Tüm hakları saklıdır.</p>
+                    <p class="designer-credit" data-translate="footer-designer">Tasarım: Mert Çalışkan</p>
                 </div>
             </div>
         </div>
