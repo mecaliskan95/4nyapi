@@ -2,6 +2,8 @@ const translations = {
     tr: {
         "hero-title": "DÖRT DÖRTLÜK KALİTE<br>DÖRT DÖRTLÜK GÜVEN",
         "hero-intro": "4N Yapı olarak, konut, ticari ve sanayi yapılarında kaliteyi, mühendisliği ve estetiği bir araya getiriyoruz. Ankara merkezli firmamızla, güvenilir ve modern yaşam alanları inşa ediyor, geleceğe sağlam adımlar atıyoruz.",
+        "hero-projects": "Projelerimizi İnceleyin",
+        "hero-contact": "İletişime Geçin",
         "nav-kurumsal": "KURUMSAL",
         "nav-projeler": "PROJELERİMİZ",
         "nav-iletisim": "İLETİŞİM",
@@ -47,6 +49,7 @@ const translations = {
         "footer-quality-1": "Profesyonel Hizmet",
         "footer-quality-2": "Güvenilir Partner",
         "footer-quality-3": "Uzman Ekip",
+        "footer-copyright": "&copy; 2026 Dörten Yapı - Tüm hakları saklıdır.",
         "logo-alt": "Dörten Yapı Sanayi Logo",
         "meta-description": "Dörten Yapı - İnşaat, yapı ve müteahhitlik hizmetleri. Ankara'da profesyonel ve güvenilir yapı çözümleri.",
         "meta-keywords": "4n Yapı, Dörten Yapı, inşaat, müteahhit, yapı, Ankara, inşaat firması, müteahhitlik",
@@ -55,6 +58,8 @@ const translations = {
     en: {
         "hero-title": "PERFECT QUALITY<br>PERFECT TRUST",
         "hero-intro": "As 4N Yapı, we bring together quality, engineering and aesthetics in residential, commercial and industrial structures. With our Ankara-based company, we build safe and modern living spaces and take firm steps towards the future.",
+        "hero-projects": "Explore Our Projects",
+        "hero-contact": "Get in Touch",
         "nav-kurumsal": "CORPORATE",
         "nav-projeler": "PROJECTS",
         "nav-iletisim": "CONTACT",
@@ -101,7 +106,7 @@ const translations = {
         "footer-quality-1": "Professional Service",
         "footer-quality-2": "Reliable Partner",
         "footer-quality-3": "Expert Team",
-        "footer-copyright": "&copy; 2025 Dörten Yapı - All rights reserved.",
+        "footer-copyright": "&copy; 2026 Dörten Yapı - All rights reserved.",
         "footer-designer": "Design: Mert Çalışkan",
         "logo-alt": "Dörten Yapı Sanayi Logo",
         "meta-description": "Dörten Yapı - Construction, building and contracting services. Professional and reliable building solutions in Ankara.",
@@ -109,6 +114,8 @@ const translations = {
         "loading-text": "Loading..."
     }
 };
+
+let projectPreviewTrigger = null;
 
 // Enhanced Loading Animation with smooth transitions
 function showLoading() {
@@ -178,6 +185,59 @@ function smoothScrollTo(targetId) {
     }
 }
 
+function openProjectPreview(image) {
+    const card = image.closest('.project-card');
+    const title = card?.querySelector('.project-title')?.textContent?.trim() || image.alt;
+    const location = card?.querySelector('.project-location')?.textContent?.trim() || '';
+
+    let modal = document.querySelector('.project-preview');
+    projectPreviewTrigger = image;
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.className = 'project-preview';
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-modal', 'true');
+        modal.setAttribute('aria-labelledby', 'project-preview-title');
+        modal.innerHTML = `
+            <button type="button" class="project-preview-close" aria-label="Projeyi kapat">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <figure class="project-preview-content">
+                <img src="" alt="">
+                <figcaption>
+                    <strong id="project-preview-title"></strong>
+                    <span></span>
+                </figcaption>
+            </figure>
+        `;
+        document.body.appendChild(modal);
+
+        const close = () => {
+            modal.classList.remove('active');
+            document.body.classList.remove('preview-open');
+            projectPreviewTrigger?.focus();
+        };
+
+        modal.querySelector('.project-preview-close').addEventListener('click', close);
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) close();
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modal.classList.contains('active')) close();
+        });
+    }
+
+    projectPreviewTrigger = image;
+    const previewImage = modal.querySelector('img');
+    previewImage.src = image.currentSrc || image.src;
+    previewImage.alt = image.alt;
+    modal.querySelector('strong').textContent = title;
+    modal.querySelector('span').textContent = location;
+    modal.classList.add('active');
+    document.body.classList.add('preview-open');
+    modal.querySelector('.project-preview-close').focus();
+}
+
 // Enhanced initialization with performance optimizations
 function initializeSimpleEffects() {
     // Add enhanced click handlers for navigation with ripple effect
@@ -200,6 +260,8 @@ function initializeSimpleEffects() {
     const projectImages = document.querySelectorAll('.project-image');
     projectImages.forEach(image => {
         image.style.cursor = 'pointer';
+        image.setAttribute('tabindex', '0');
+        image.setAttribute('role', 'button');
         
         // Add hover effect
         image.addEventListener('mouseenter', () => {
@@ -212,13 +274,12 @@ function initializeSimpleEffects() {
             image.style.filter = 'brightness(1) saturate(1)';
         });
         
-        image.addEventListener('click', () => {
-            // Add click animation
-            image.style.transform = 'scale(0.98)';
-            setTimeout(() => {
-                image.style.transform = 'scale(1.02)';
-                window.open(image.src, '_blank');
-            }, 100);
+        image.addEventListener('click', () => openProjectPreview(image));
+        image.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openProjectPreview(image);
+            }
         });
         
         // Enhanced lazy loading
@@ -287,7 +348,21 @@ function initializeSimpleEffects() {
 
 // Header is now completely fixed - no scroll handling needed
 function handleScroll() {
-    // Update progress bar only
+    const header = document.querySelector('.header');
+    if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 24);
+    }
+    const sections = ['kurumsal', 'projeler', 'iletisim'];
+    let activeSection = '';
+    sections.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= 160) {
+            activeSection = id;
+        }
+    });
+    document.querySelectorAll('.nav-link').forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${activeSection}`);
+    });
     updateScrollProgress();
 }
 
@@ -427,7 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         hideLoading();
         document.body.classList.add('loaded');
-    }, 1200);
+    }, 350);
     
     // Initialize language from storage or default to Turkish
     const preferredLanguage = localStorage.getItem('preferredLanguage') || 'tr';
@@ -801,6 +876,7 @@ class MobileNavigation {
         this.mobileNav = document.getElementById('mobileNav');
         this.mobileOverlay = document.getElementById('mobileOverlay');
         this.mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        this.mobileClose = this.mobileNav?.querySelector('.mobile-nav-close');
         this.isOpen = false;
         
         this.init();
@@ -820,6 +896,10 @@ class MobileNavigation {
         
         // Close on overlay click
         this.mobileOverlay.addEventListener('click', () => {
+            this.closeMenu();
+        });
+
+        this.mobileClose?.addEventListener('click', () => {
             this.closeMenu();
         });
         
@@ -856,6 +936,7 @@ class MobileNavigation {
     openMenu() {
         this.isOpen = true;
         this.menuToggle.classList.add('active');
+        this.menuToggle.setAttribute('aria-expanded', 'true');
         this.mobileNav.classList.add('active');
         this.mobileOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -867,6 +948,7 @@ class MobileNavigation {
     closeMenu() {
         this.isOpen = false;
         this.menuToggle.classList.remove('active');
+        this.menuToggle.setAttribute('aria-expanded', 'false');
         this.mobileNav.classList.remove('active');
         this.mobileOverlay.classList.remove('active');
         document.body.style.overflow = '';

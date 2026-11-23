@@ -36,6 +36,7 @@
     
     <!-- Preload critical images for faster loading -->
     <link rel="preload" href="assets/images/4nyapi_logo.png" as="image">
+    <link rel="preload" href="assets/images/closeup-of-engineer-posing-on-building-site-with-o-2021-12-14-18-47-12-utc.jpg" as="image" fetchpriority="high">
     <link rel="preload" href="assets/images/projects/Atakule GYO Arjantin Caddesi Ofis Binası.jpg" as="image">
     <link rel="preload" href="assets/images/projects/Atakule GYO Farabi Ofis Binası.jpg" as="image">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -72,21 +73,33 @@
             </div>
             
             <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Mobil menüyü aç/kapat">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Mobil menüyü aç/kapat" aria-expanded="false" aria-controls="mobileNav">
                 <span class="sr-only">Menüyü Aç/Kapat</span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </button>
         </nav>
         
         <!-- Mobile Navigation -->
         <div class="mobile-overlay" id="mobileOverlay"></div>
         <nav class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-header">
+                <img src="assets/images/4nyapi_logo.png" alt="Dörten Yapı Logo" class="mobile-nav-logo">
+                <button type="button" class="mobile-nav-close" aria-label="Menüyü kapat">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
             <div class="mobile-nav-links">
                 <a href="#kurumsal" class="mobile-nav-link" data-translate="nav-kurumsal">KURUMSAL</a>
                 <a href="#projeler" class="mobile-nav-link" data-translate="nav-projeler">PROJELERİMİZ</a>
                 <a href="#iletisim" class="mobile-nav-link" data-translate="nav-iletisim">İLETİŞİM</a>
+            </div>
+            <div class="mobile-nav-footer">
+                <div class="mobile-language-switcher" aria-label="Dil seçimi">
+                    <button type="button" class="mobile-lang-btn lang-btn active" data-lang="tr">TR</button>
+                    <button type="button" class="mobile-lang-btn lang-btn" data-lang="en">EN</button>
+                </div>
             </div>
         </nav>
     </header>
@@ -94,17 +107,21 @@
     <!-- Main Content -->
     <main id="main-content" role="main">
         <!-- Hero Section -->
-        <section class="hero" role="banner" aria-label="Ana sayfa hero bölümü">
+        <section class="hero" aria-label="Ana sayfa hero bölümü">
             <div class="hero-content">
                 <h1 data-translate="hero-title">DÖRT DÖRTLÜK KALİTE<br>DÖRT DÖRTLÜK GÜVEN</h1>
                 <p class="hero-intro" data-translate="hero-intro">
                     4N Yapı olarak, konut, ticari ve sanayi yapılarında kaliteyi, mühendisliği ve estetiği bir araya getiriyoruz. Ankara merkezli firmamızla, güvenilir ve modern yaşam alanları inşa ediyor, geleceğe sağlam adımlar atıyoruz.
                 </p>
+                <div class="hero-actions">
+                    <a href="#projeler" class="hero-btn hero-btn-primary" data-translate="hero-projects">Projelerimizi İnceleyin</a>
+                    <a href="#iletisim" class="hero-btn hero-btn-secondary" data-translate="hero-contact">İletişime Geçin</a>
+                </div>
             </div>
         </section>
 
         <!-- Kurumsal Section -->
-        <section id="kurumsal" class="section" role="main" aria-labelledby="kurumsal-title">
+        <section id="kurumsal" class="section" aria-labelledby="kurumsal-title">
             <div class="container">
                 <h2 id="kurumsal-title" class="section-title" data-translate="section-kurumsal">KURUMSAL</h2>
                 
@@ -134,7 +151,7 @@
         </section>
 
         <!-- Projeler Section -->
-        <section id="projeler" class="section" role="main" aria-labelledby="projeler-title">
+        <section id="projeler" class="section" aria-labelledby="projeler-title">
             <div class="container">
                 <h2 id="projeler-title" class="section-title" data-translate="section-projeler">PROJELERİMİZ</h2>
                 <p class="projects-intro" data-translate="projects-intro">4N Yapı, kuruluşundan bu yana birçok başarılı projeye imza atmıştır. Konut, iş merkezi ve endüstriyel yapı kategorilerinde uzmanlaşmış ekibimizle; işlevsel, estetik ve yönetmeliklere tam uyumlu yapılar tasarlayıp hayata geçiriyoruz. Referans projelerimiz, mühendislik hassasiyeti ve kullanıcı memnuniyetini bir arada sunan profesyonel çözümlerimizle şekillenmektedir.</p>
@@ -431,6 +448,13 @@
                     </div>
                 </div>
                 <div class="project-card">
+                    <img src="assets/images/projects/20261123_130357.jpg" alt="İncek Özel Villa" class="project-image" loading="lazy">
+                    <div class="project-info">
+                        <h3 class="project-title">Özel Villa</h3>
+                        <p class="project-location">İncek/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
                     <img src="assets/images/projects/Özel Ofis.jpg" alt="Özel Ofis Tadilatı" class="project-image" loading="lazy">
                     <div class="project-info">
                         <h3 class="project-title">Özel Ofis Tadilatı</h3>
@@ -676,6 +700,10 @@
                         <p class="project-details">İncek/ANKARA</p>
                     </div>
                     <div class="project-item">
+                        <h4>Özel Villa</h4>
+                        <p class="project-details">İncek/ANKARA</p>
+                    </div>
+                    <div class="project-item">
                         <h4>Togan Özliyen Sağlık Merkezi ve Kreş</h4>
                         <p class="project-details">Gaziosmanpaşa/ANKARA</p>
                     </div>
@@ -888,7 +916,7 @@
         </section>
 
         <!-- İletişim Section -->
-        <section id="iletisim" class="section contact-section" role="main" aria-labelledby="iletisim-title">
+        <section id="iletisim" class="section contact-section" aria-labelledby="iletisim-title">
             <div class="container">
                 <h2 id="iletisim-title" class="section-title" data-translate="section-iletisim">İLETİŞİM</h2>
                 <p class="contact-intro" data-translate="contact-intro">4N Yapı ile projelerinizi güvenle hayata geçirmek için bizimle iletişime geçin. Ofisimiz Ankara’nın Çankaya ilçesinde yer almakta olup, telefon veya e-posta aracılığıyla bize kolayca ulaşabilirsiniz.</p>
@@ -915,7 +943,7 @@
                                 </div>
                                 <div class="contact-card-content">
                                     <h4 data-translate="contact-phone">Telefon</h4>
-                                    <span>+90 (312) 426 07 78</span>
+                                    <a href="tel:+903124260778">+90 (312) 426 07 78</a>
                                 </div>
                             </div>
                             
@@ -1021,7 +1049,7 @@
             
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p class="copyright" data-translate="footer-copyright">&copy; 2025 Dörten Yapı - Tüm hakları saklıdır.</p>
+                    <p class="copyright" data-translate="footer-copyright">&copy; 2026 Dörten Yapı - Tüm hakları saklıdır.</p>
                     <p class="designer-credit" data-translate="footer-designer">Tasarım: Mert Çalışkan</p>
                 </div>
             </div>
@@ -1064,27 +1092,5 @@
     }
     </script>
     
-    <!-- Force header to stay fixed -->
-    <script>
-        function forceHeaderFixed() {
-            const header = document.querySelector('.header');
-            if (header) {
-                header.style.cssText = 'position: fixed !important; top: 0px !important; left: 0px !important; right: 0px !important; width: 100% !important; height: 70px !important; z-index: 999999 !important; background: rgba(255, 255, 255, 0.95) !important; transform: none !important; transition: none !important; margin: 0 !important; padding: 0 !important;';
-            }
-        }
-        
-        // Force on load
-        window.addEventListener('load', forceHeaderFixed);
-        
-        // Force on DOM ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', forceHeaderFixed);
-        } else {
-            forceHeaderFixed();
-        }
-        
-        // Force continuously to override any interference
-        setInterval(forceHeaderFixed, 100);
-    </script>
 </body>
 </html>
