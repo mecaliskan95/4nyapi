@@ -20,6 +20,9 @@ const translations = {
         "featured-projects": "ÖNE ÇIKAN PROJELERİMİZ",
         "all-projects": "TÜM PROJELERİMİZ",
         "hide-all-projects": "Gizle",
+        "project-search-label": "Projelerde ara",
+        "project-search-placeholder": "Proje adı veya konum ara...",
+        "project-search-empty": "Aramanızla eşleşen proje bulunamadı.",
         "residential-projects": "Konut Projeleri",
         "commercial-projects": "Ticari Projeler",
         "industrial-projects": "Sanayi Projeleri",
@@ -76,6 +79,9 @@ const translations = {
         "featured-projects": "FEATURED PROJECTS",
         "all-projects": "ALL PROJECTS",
         "hide-all-projects": "Hide",
+        "project-search-label": "Search projects",
+        "project-search-placeholder": "Search by project name or location...",
+        "project-search-empty": "No projects match your search.",
         "residential-projects": "Residential Projects",
         "commercial-projects": "Commercial Projects",
         "industrial-projects": "Industrial Projects",
@@ -754,6 +760,11 @@ function smoothScrollTo(targetId) {
     const target = document.querySelector(targetId);
     if (target) {
         const targetPosition = target.offsetTop - 80;
+        if (prefersReducedMotion.matches) {
+            window.scrollTo(0, targetPosition);
+            return;
+        }
+
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
         const duration = Math.min(Math.abs(distance) / 2, 1200); // Dynamic duration
@@ -1002,6 +1013,8 @@ class ProgressIndicator {
 document.addEventListener('DOMContentLoaded', function() {
     const allProjectsSection = document.getElementById('allProjectsSection');
     const toggle = document.getElementById('mobileProjectsToggle');
+    const projectSearch = document.getElementById('projectSearch');
+    const projectSearchEmpty = document.getElementById('projectSearchEmpty');
     
     // Always keep projects section expanded and hide toggle button
     if (allProjectsSection) {
@@ -1011,6 +1024,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hide the mobile toggle button completely
     if (toggle) {
         toggle.style.display = 'none';
+    }
+
+    if (projectSearch && projectSearchEmpty && allProjectsSection) {
+        const projectItems = Array.from(allProjectsSection.querySelectorAll('.project-item'));
+        projectSearch.addEventListener('input', () => {
+            const language = document.documentElement.lang || 'tr';
+            const terms = projectSearch.value.trim().toLocaleLowerCase(language).split(/\s+/).filter(Boolean);
+            let visibleCount = 0;
+
+            projectItems.forEach(item => {
+                const text = item.textContent.toLocaleLowerCase(language);
+                const matches = terms.every(term => text.includes(term));
+                item.hidden = !matches;
+                if (matches) visibleCount++;
+            });
+
+            projectSearchEmpty.hidden = visibleCount > 0;
+        });
     }
 });
 

@@ -60,8 +60,8 @@
     --border-dark: #ccc;              /* dark border */
     --border-focus: var(--primary-light);
     
-    /* Typography System - Inter Font */
-    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    /* Typography System - DM Sans */
+    --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     
     /* Font Sizes - Optimized for UX/UI Best Practices */
     --font-size-xs: 0.75rem;    /* 12px - Small labels, captions */
@@ -234,7 +234,7 @@
 }
 
 /* Remove focus outline globally */
-*:focus {
+*:focus:not(:focus-visible) {
     outline: none;
 }
 
@@ -5489,4 +5489,21 @@ html {
     .hero-actions {
         justify-content: flex-start;
     }
+}
+
+.project-search {
+    max-width: 460px;
+    margin: 0 auto var(--spacing-lg);
+    padding-inline: var(--container-padding);
+}
+
+.project-search-empty {
+    margin: 0 auto var(--spacing-lg);
+    padding-inline: var(--container-padding);
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.all-projects-grid .project-item[hidden] {
+    display: none;
 }

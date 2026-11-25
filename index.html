@@ -28,7 +28,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -166,6 +166,20 @@
             <!-- Featured Projects Grid -->
             <div class="featured-projects-section">
                 <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/images/projects/4af4d97c-4fe3-4fc5-b9b1-c0638a5bc2f9.png" alt="Ofis Binası" class="project-image" loading="eager">
+                    <div class="project-info">
+                        <h3 class="project-title">Ofis Binası</h3>
+                        <p class="project-location">Yavuz Sultan Selim Blv., Beytepe/ANKARA</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/projects/20261123_130357.jpg" alt="İncek Özel Villa" class="project-image" loading="lazy">
+                    <div class="project-info">
+                        <h3 class="project-title">Özel Villa</h3>
+                        <p class="project-location">İncek/ANKARA</p>
+                    </div>
+                </div>
                 <div class="project-card">
                     <img src="assets/images/projects/Atakule GYO Arjantin Caddesi Ofis Binası.jpg" alt="Atakule GYO Ofis Binası" class="project-image" loading="eager">
                     <div class="project-info">
@@ -448,13 +462,6 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/projects/20261123_130357.jpg" alt="İncek Özel Villa" class="project-image" loading="lazy">
-                    <div class="project-info">
-                        <h3 class="project-title">Özel Villa</h3>
-                        <p class="project-location">İncek/ANKARA</p>
-                    </div>
-                </div>
-                <div class="project-card">
                     <img src="assets/images/projects/Özel Ofis.jpg" alt="Özel Ofis Tadilatı" class="project-image" loading="lazy">
                     <div class="project-info">
                         <h3 class="project-title">Özel Ofis Tadilatı</h3>
@@ -490,6 +497,11 @@
             </div>
             
             <div class="all-projects-section" id="allProjectsSection">
+                <div class="project-search">
+                    <label class="sr-only" for="projectSearch" data-translate="project-search-label">Projelerde ara</label>
+                    <input class="form-control" id="projectSearch" type="search" data-translate-placeholder="project-search-placeholder" placeholder="Proje adı veya konum ara..." autocomplete="off" aria-controls="allProjectsGrid">
+                </div>
+                <p class="project-search-empty" id="projectSearchEmpty" role="status" aria-live="polite" hidden data-translate="project-search-empty">Aramanızla eşleşen proje bulunamadı.</p>
                 <div class="all-projects-grid" id="allProjectsGrid">
                     <div class="project-item">
                         <h4>Atakule GYO Arjantin Caddesi Ofis Binası</h4>
